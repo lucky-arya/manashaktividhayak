@@ -33,7 +33,12 @@ const registrationValidation = [
   
   body('problemChoice')
     .isIn(['ps1', 'ps2', 'ps3', 'ps4', 'ps5', 'ps6', 'ps7'])
-    .withMessage('Please select a valid problem statement')
+    .withMessage('Please select a valid problem statement'),
+  
+  body('problemTitle')
+    .trim()
+    .notEmpty()
+    .withMessage('Problem statement title is required')
 ];
 
 // @route   POST /api/registrations
@@ -53,7 +58,7 @@ router.post('/', registrationValidation, async (req, res) => {
       });
     }
 
-    const { teamName, teamLeader, email, phone, teamSize, problemChoice } = req.body;
+    const { teamName, teamLeader, email, phone, teamSize, problemChoice, problemTitle } = req.body;
 
     // Check if email already exists
     const existingRegistration = await Registration.findOne({ email });
@@ -71,7 +76,8 @@ router.post('/', registrationValidation, async (req, res) => {
       email,
       phone,
       teamSize: parseInt(teamSize),
-      problemChoice
+      problemChoice,
+      problemTitle
     });
 
     await registration.save();

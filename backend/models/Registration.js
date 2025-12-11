@@ -48,6 +48,11 @@ const registrationSchema = new mongoose.Schema({
       message: '{VALUE} is not a valid problem statement'
     }
   },
+  problemTitle: {
+    type: String,
+    required: [true, 'Problem statement title is required'],
+    trim: true
+  },
   registrationDate: {
     type: Date,
     default: Date.now
