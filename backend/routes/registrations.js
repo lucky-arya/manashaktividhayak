@@ -28,11 +28,11 @@ const registrationValidation = [
     .withMessage('Please provide a valid phone number'),
   
   body('teamSize')
-    .isInt({ min: 2, max: 5 })
-    .withMessage('Team size must be between 2 and 5 members'),
+    .isInt({ min: 1, max: 5 })
+    .withMessage('Team size must be between 1 and 5 members'),
   
   body('problemChoice')
-    .isIn(['edu1', 'health1', 'env1', 'social1'])
+    .isIn(['ps1', 'ps2', 'ps3', 'ps4', 'ps5', 'ps6', 'ps7'])
     .withMessage('Please select a valid problem statement')
 ];
 

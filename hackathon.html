@@ -859,11 +859,11 @@
      <div class="event-info">
       <div class="event-item">
        <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-       </svg><span>March 15-17, 2024</span>
+       </svg><span>December 31, 2025</span>
       </div>
       <div class="event-item">
-       <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-       </svg><span>9:00 AM - 6:00 PM</span>
+       <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+       </svg><span>Lonavala, Maharashtra</span>
       </div>
      </div>
      <div class="cta-buttons"><button class="btn btn-primary" id="registerBtn">Register Now</button> <button class="btn btn-secondary" id="viewProblemsBtn">View Problem Statements</button>
@@ -873,13 +873,13 @@
    <section id="overview">
     <div class="section-container">
      <h2 class="section-title">About the Event</h2>
-     <p class="section-text">Join us for an exciting hackathon focused on creating innovative solutions for social challenges. Collaborate with passionate individuals, learn from industry experts, and build projects that make a real difference in society.</p>
+     <p class="section-text">Join Manashakti Youth Festival Hackathon on 31st December 2025 at Manashanti Kendra, Lonavala. Solve real-world problems in UI/UX, AI, subscriptions, and wellness tracking for one of India's oldest spiritual research organizations with 35,000+ subscribers and 250+ books of wisdom. For youth aged 15-25 years.</p>
     </div>
    </section><!-- Problem Statements Section -->
    <section id="problems">
     <div class="problems-container">
      <h2 class="section-title">Problem Statements</h2>
-     <div class="filter-buttons"><button class="filter-btn active" data-filter="all">All</button> <button class="filter-btn" data-filter="education">Education</button> <button class="filter-btn" data-filter="health">Health</button> <button class="filter-btn" data-filter="environment">Environment</button> <button class="filter-btn" data-filter="social">Social Impact</button>
+     <div class="filter-buttons"><button class="filter-btn active" data-filter="all">All</button> <button class="filter-btn" data-filter="uiux">UI/UX</button> <button class="filter-btn" data-filter="subscription">Subscription</button> <button class="filter-btn" data-filter="tracking">Tracking</button> <button class="filter-btn" data-filter="ai">AI</button> <button class="filter-btn" data-filter="engagement">Engagement</button>
      </div>
      <div class="problem-cards" id="problemCards"></div>
     </div>
@@ -896,9 +896,9 @@
       </div>
       <div class="form-group"><label for="phone" class="form-label">Phone Number</label> <input type="tel" id="phone" class="form-input" required placeholder="+91 98765 43210">
       </div>
-      <div class="form-group"><label for="teamSize" class="form-label">Team Size</label> <select id="teamSize" class="form-select" required> <option value="">Select team size</option> <option value="2">2 Members</option> <option value="3">3 Members</option> <option value="4">4 Members</option> <option value="5">5 Members</option> </select>
+      <div class="form-group"><label for="teamSize" class="form-label">Team Size</label> <select id="teamSize" class="form-select" required> <option value="">Select team size</option> <option value="1">1 Member (Solo)</option> <option value="2">2 Members</option> <option value="3">3 Members</option> <option value="4">4 Members</option> <option value="5">5 Members</option> </select>
       </div>
-      <div class="form-group"><label for="problemChoice" class="form-label">Preferred Problem Statement</label> <select id="problemChoice" class="form-select" required> <option value="">Select a problem</option> <option value="edu1">Digital Learning Platform</option> <option value="health1">Telemedicine Solution</option> <option value="env1">Waste Management System</option> <option value="social1">Community Connect App</option> </select>
+      <div class="form-group"><label for="problemChoice" class="form-label">Preferred Problem Statement</label> <select id="problemChoice" class="form-select" required> <option value="">Select a problem</option> <option value="ps1">Website UI/UX - The "Clutter" Problem</option> <option value="ps2">Manatarang App UI/UX - The "Ease" Problem</option> <option value="ps3">Magazine Subscription - The "Conversion" Problem</option> <option value="ps4">Suggested Methods - The "Impact Tracking" Problem</option> <option value="ps5">Manashakti Wisdom - The "Discovery" Problem</option> <option value="ps6">Seeding Success - The "Retention" Problem</option> <option value="ps7">Mind Gym - The "Engagement" Problem</option> </select>
       </div><button type="submit" class="submit-btn">Submit Registration</button>
      </form>
      <div class="success-message" id="successMessage">
@@ -959,64 +959,164 @@
     const problems = [
       {
         id: 1,
-        category: "education",
-        title: "Digital Learning Platform",
-        description: "Create an accessible online learning platform for rural students with offline capabilities.",
-        difficulty: "Medium"
+        category: "uiux",
+        title: "Website UI/UX - The \"Clutter\" Problem",
+        description: "Redesign www.manashakti.org to solve confusion, information overload, and poor mobile responsiveness.",
+        difficulty: "Medium",
+        details: {
+          statement: "The current www.manashakti.org website visitors suffer from confusion during booking, information overload and structural complexity. Users, especially on mobile devices, cannot find key resources, driving users away.",
+          keyIssues: [
+            "Content discoverability issues (events, books, courses, experiments)",
+            "Complex navigation structure",
+            "Overloaded pages with dense text",
+            "Low mobile responsiveness",
+            "Lack of personalization for different user groups",
+            "Limited accessibility features",
+            "Poor search functionality",
+            "Missing engagement tools like chatbots",
+            "Complex booking workflows"
+          ],
+          expectedSolution: "Wireframes, Live prototype (MVP), Working model"
+        }
       },
       {
         id: 2,
-        category: "health",
-        title: "Telemedicine Solution",
-        description: "Develop a telemedicine app connecting patients in remote areas with healthcare professionals.",
-        difficulty: "Hard"
+        category: "uiux",
+        title: "Manatarang App UI/UX - The \"Ease\" Problem",
+        description: "Improve the meditation and wellness app's onboarding, engagement, and conversion from free to paid.",
+        difficulty: "Medium",
+        details: {
+          statement: "The Manatarang app delivers guided meditation, wellness content and animated Sanskar Stories for Kids. However, users face challenges resulting in lower engagement and low conversion.",
+          keyIssues: [
+            "Unclear user onboarding",
+            "Difficult navigation and feature discovery",
+            "Lack of personalized recommendations",
+            "No progress trackers or streaks",
+            "Unclear value proposition for paid version",
+            "Complex premium purchase flow",
+            "Speed optimization needed",
+            "Static search functionality",
+            "Inconsistent visual identity"
+          ],
+          expectedSolution: "Wireframes, Live prototype (MVP), Working model"
+        }
       },
       {
         id: 3,
-        category: "environment",
-        title: "Waste Management System",
-        description: "Design a smart waste segregation and collection system for urban communities.",
-        difficulty: "Medium"
+        category: "subscription",
+        title: "Magazine Subscription - The \"Conversion\" Problem",
+        description: "Solve declining subscription renewal for Manashakti's 48-year-old monthly magazine with 35,000+ subscribers.",
+        difficulty: "Hard",
+        details: {
+          statement: "Manashakti's Monthly Magazine has over 35,000 active subscribers but faces declining retention and irregular renewal patterns.",
+          keyIssues: [
+            "Subscription offerings not highlighted",
+            "Benefits not clearly communicated",
+            "Lack of timely renewal reminders",
+            "Complicated renewal process",
+            "No auto-renewal options",
+            "Manual tracking of dispatches",
+            "Address inaccuracies causing failed deliveries",
+            "Zero delivery visibility for subscribers"
+          ],
+          expectedSolution: "Proposal presentation, Technological Solution (Wireframe/MVP/Completed)"
+        }
       },
       {
         id: 4,
-        category: "social",
-        title: "Community Connect App",
-        description: "Build a platform for local communities to share resources and support each other.",
-        difficulty: "Easy"
+        category: "tracking",
+        title: "Suggested Methods - The \"Impact Tracking\" Problem",
+        description: "Build a centralized system to track user implementation and long-term progress of Manashakti's wellness methods.",
+        difficulty: "Hard",
+        details: {
+          statement: "Manashakti offers diverse solutions but lacks a centralized system to track user implementation and long-term progress.",
+          keyIssues: [
+            "Digital data fragmentation",
+            "Lack of self-monitoring tools",
+            "No visual feedback loops",
+            "Absence of admin oversight",
+            "Information silos between users and research centre",
+            "Disconnected user experience",
+            "Privacy and trust barriers"
+          ],
+          expectedSolution: "Logging App (Web/Mobile/Wireframe), Admin tracking interface, Growth summary reports"
+        }
       },
       {
         id: 5,
-        category: "education",
-        title: "Skill Development Portal",
-        description: "Create a platform matching youth with vocational training opportunities.",
-        difficulty: "Medium"
+        category: "ai",
+        title: "Manashakti Wisdom - The \"Discovery\" Problem",
+        description: "Create an AI-powered search to access wisdom from 250+ books by mood, interest, or age group.",
+        difficulty: "Hard",
+        details: {
+          statement: "Manashakti has 250+ books of wisdom but poor categorization makes it inaccessible. Users can't search by mood, interest, or age group.",
+          keyIssues: [
+            "Users don't know which book has the solution",
+            "Time-consuming to search through physical books",
+            "Overwhelming for new readers",
+            "Weak search functionality",
+            "No natural language question support",
+            "Generic AI solutions provide conflicting advice"
+          ],
+          expectedSolution: "AI-based search engine with NLP, personalized guidance, English & Marathi support (Wireframes/MVP/Working model)"
+        }
       },
       {
         id: 6,
-        category: "environment",
-        title: "Water Conservation Tool",
-        description: "Develop an IoT-based solution for monitoring and optimizing water usage.",
-        difficulty: "Hard"
+        category: "engagement",
+        title: "Seeding Success - The \"Retention\" Problem",
+        description: "Create a digital habit tracker and goal setter for the 'Self Excellence' methodology.",
+        difficulty: "Medium",
+        details: {
+          statement: "The Self Excellence methodology exists as theory but lacks a digital tool for tracking daily progress and visualizing habit-building.",
+          keyIssues: [
+            "No feedback loop to keep users motivated",
+            "Can't track daily progress",
+            "No goal-setting mechanism",
+            "No progress visualization"
+          ],
+          expectedSolution: "Digital Habit Tracker & Goal Setter with progress graphs"
+        }
+      },
+      {
+        id: 7,
+        category: "engagement",
+        title: "Mind Gym - The \"Engagement\" Problem",
+        description: "Build gamified mental challenges and brain games to keep youth engaged daily.",
+        difficulty: "Medium",
+        details: {
+          statement: "Current wellness exercises are passive. Platform lacks interactive, gamified mental challenges for youth engagement.",
+          keyIssues: [
+            "Static, passive content",
+            "Lack of interactivity",
+            "No gamification elements",
+            "Low daily engagement from youth"
+          ],
+          expectedSolution: "Gamified Brain Exercises (Focus tests, Memory games) with leaderboards"
+        }
       }
     ];
 
     const faqs = [
       {
         question: "Who can participate?",
-        answer: "Students, professionals, and anyone passionate about creating social impact through technology can participate. Teams of 2-5 members are encouraged."
+        answer: "Youth aged 15-25 years. Teams of 1-5 members. STRICT GENDER POLICY: Teams must be All-Male or All-Female. Mixed-gender teams are not permitted."
       },
       {
-        question: "Is there a registration fee?",
-        answer: "Yes, there is a nominal registration fee of ₹500 per team to cover event costs and provide refreshments."
+        question: "What are the important dates?",
+        answer: "Registration Deadline: 25 December 2025 11:59 PM. Submission Deadline: 29 December 6 PM IST. Event Date: 31 December 2025 at Manashanti Kendra, Lonavala."
+      },
+      {
+        question: "What's included in registration?",
+        answer: "Registration covers entry to the Hackathon, pure vegetarian satvik meals, and dormitory accommodation for the night of 31st December. You can also attend the Manashakti Youth Festival."
       },
       {
         question: "What should I bring?",
-        answer: "Bring your laptop, chargers, and enthusiasm! We'll provide workspace, WiFi, meals, and mentorship throughout the event."
+        answer: "Bring your own laptop, chargers, mobile devices, valid Government ID, and College/Company ID cards. Pre-install necessary software (Figma, VS Code, Android Studio). Wi-Fi will be provided but bring a personal hotspot as backup."
       },
       {
-        question: "Are there prizes?",
-        answer: "Yes! Cash prizes, internship opportunities, and mentorship programs await the winning teams. Details will be announced at the event."
+        question: "What is the code of conduct?",
+        answer: "ZERO TOLERANCE for alcohol, tobacco, drugs. Wear modest attire suitable for an Ashram. Maintain silence in Meditation Zones. Men and women stay in separate accommodation wings. Any violation leads to immediate expulsion."
       },
       {
         question: "Do I need to have a team?",
@@ -1066,6 +1166,10 @@
       const modal = document.getElementById('modal');
       const modalBody = document.getElementById('modalBody');
       
+      const keyIssuesList = problem.details && problem.details.keyIssues 
+        ? problem.details.keyIssues.map(issue => `<li>• ${issue}</li>`).join('')
+        : '<li>• User-friendly interface design</li><li>• Scalable architecture</li><li>• Security best practices</li>';
+      
       modalBody.innerHTML = `
         <div class="modal-badges">
           <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
@@ -1075,23 +1179,23 @@
         <h2 class="modal-title">${problem.title}</h2>
         
         <div class="modal-body">
-          <h3>Problem Description:</h3>
-          <p>${problem.description}</p>
+          <h3>Problem Statement:</h3>
+          <p>${problem.details ? problem.details.statement : problem.description}</p>
           
-          <h3>Key Requirements:</h3>
+          <h3>Key Issues:</h3>
           <ul>
-            <li>• User-friendly interface design</li>
-            <li>• Scalable and maintainable architecture</li>
-            <li>• Consider accessibility and inclusivity</li>
-            <li>• Implement security best practices</li>
+            ${keyIssuesList}
           </ul>
           
-          <h3>Expected Deliverables:</h3>
+          <h3>Expected Solution:</h3>
+          <p>${problem.details ? problem.details.expectedSolution : 'Wireframes, Working prototype (MVP), Completed Solution'}</p>
+          
+          <h3>Deliverables:</h3>
           <ul>
             <li>• Working prototype or MVP</li>
             <li>• Technical documentation</li>
-            <li>• Presentation deck (10-15 slides)</li>
-            <li>• Demo video (3-5 minutes)</li>
+            <li>• Presentation deck</li>
+            <li>• Demo (if applicable)</li>
           </ul>
         </div>
       `;

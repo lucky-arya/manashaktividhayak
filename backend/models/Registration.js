@@ -37,14 +37,14 @@ const registrationSchema = new mongoose.Schema({
   teamSize: {
     type: Number,
     required: [true, 'Team size is required'],
-    min: [2, 'Team must have at least 2 members'],
+    min: [1, 'Team must have at least 1 member'],
     max: [5, 'Team cannot exceed 5 members']
   },
   problemChoice: {
     type: String,
     required: [true, 'Problem statement selection is required'],
     enum: {
-      values: ['edu1', 'health1', 'env1', 'social1'],
+      values: ['ps1', 'ps2', 'ps3', 'ps4', 'ps5', 'ps6', 'ps7'],
       message: '{VALUE} is not a valid problem statement'
     }
   },
@@ -68,10 +68,13 @@ registrationSchema.index({ registrationDate: -1 });
 // Virtual for problem statement title
 registrationSchema.virtual('problemTitle').get(function() {
   const problemMap = {
-    'edu1': 'Digital Learning Platform',
-    'health1': 'Telemedicine Solution',
-    'env1': 'Waste Management System',
-    'social1': 'Community Connect App'
+    'ps1': 'Website UI/UX - The "Clutter" Problem',
+    'ps2': 'Manatarang App UI/UX - The "Ease" Problem',
+    'ps3': 'Magazine Subscription - The "Conversion" Problem',
+    'ps4': 'Suggested Methods - The "Impact Tracking" Problem',
+    'ps5': 'Manashakti Wisdom - The "Discovery" Problem',
+    'ps6': 'Seeding Success - The "Retention" Problem',
+    'ps7': 'Mind Gym - The "Engagement" Problem'
   };
   return problemMap[this.problemChoice] || 'Unknown';
 });
