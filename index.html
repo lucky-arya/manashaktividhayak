@@ -1299,13 +1299,17 @@
       const successMsg = document.getElementById('successMessage');
       
       // Get form data
+      const problemSelect = document.getElementById('problemChoice');
+      const selectedProblem = problems.find(p => p.id === parseInt(problemSelect.value.replace('ps', '')));
+      
       const formData = {
         teamName: document.getElementById('teamName').value,
         teamLeader: document.getElementById('teamLeader').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
         teamSize: document.getElementById('teamSize').value,
-        problemChoice: document.getElementById('problemChoice').value
+        problemChoice: problemSelect.value,
+        problemTitle: selectedProblem ? selectedProblem.title : ''
       };
       
       // Disable submit button
