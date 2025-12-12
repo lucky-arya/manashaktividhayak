@@ -484,6 +484,8 @@
         text-align: left;
         max-width: 800px;
         margin: 0 auto;
+        list-style-type: disc;
+        padding-left: 2rem;
       }
 
       .guidelines-list li {
@@ -491,6 +493,7 @@
         font-size: 1.1rem;
         line-height: 1.6;
         color: #1e293b;
+        display: list-item;
       }
 
       .guidelines-list strong {
@@ -531,6 +534,8 @@
         border-radius: 1rem;
         overflow: hidden;
         box-shadow: 8px 8px 0px #ec4899;
+        position: relative;
+        width: 100%;
       }
 
       .form-iframe-container.show {
@@ -541,6 +546,34 @@
         width: 100%;
         height: 1200px;
         border: none;
+        display: block;
+      }
+
+      /* Responsive iframe for mobile */
+      @media (max-width: 768px) {
+        .form-iframe-container {
+          border: 2px solid #1e293b;
+          box-shadow: 4px 4px 0px #ec4899;
+          margin-top: 1.5rem;
+        }
+
+        .form-iframe-container iframe {
+          height: 1000px;
+          min-height: 100vh;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .form-iframe-container {
+          border-radius: 0.5rem;
+          margin-left: -0.5rem;
+          margin-right: -0.5rem;
+        }
+
+        .form-iframe-container iframe {
+          height: 900px;
+          min-height: 100vh;
+        }
       }
 
       .problem-cards {
@@ -760,17 +793,20 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         margin-bottom: 2rem;
+        text-align: center;
       }
 
       .footer-section h3 {
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 1rem;
+        text-align: center;
       }
 
       .footer-item {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 0.5rem;
         margin-bottom: 0.5rem;
       }
@@ -784,6 +820,7 @@
       .social-links {
         display: flex;
         gap: 1rem;
+        justify-content: center;
       }
 
       .social-link {
@@ -807,9 +844,13 @@
         height: 20px;
       }
 
+      .footer-links {
+        text-align: center;
+      }
+
       .footer-links a {
-        display: block;
-        margin-bottom: 0.5rem;
+        display: inline-block;
+        margin: 0 0.5rem 0.5rem 0.5rem;
         color: #1e293b;
         text-decoration: none;
       }
@@ -1109,7 +1150,7 @@
       <!-- Problem Statements Section -->
       <section id="problems">
         <div class="problems-container">
-          <h2 class="section-title">Events</h2>
+          <h2 class="section-title" style="text-align: center;">Events</h2>
           <p class="section-text" style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
             Participants can register for multiple events as Individual or team.
           </p>
@@ -1189,7 +1230,7 @@
           <div class="form-iframe-container" id="formContainer">
             <iframe 
               id="googleFormIframe"
-              src="https://docs.google.com/forms/d/e/INVALID_FORM_ID_FOR_TESTING/viewform?embedded=true" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?embedded=true" 
               frameborder="0" 
               marginheight="0" 
               marginwidth="0"
@@ -1197,6 +1238,38 @@
               onerror="showFormFallback()">
               Loading…
             </iframe>
+            
+            <!-- QR Code & Direct Link - Always Visible -->
+            <div style="text-align: center; padding: 2rem; margin-top: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
+              <h3 style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.3rem;">📱 Alternative Access Methods</h3>
+              <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 3rem;">
+                <!-- QR Code Section -->
+                <div>
+                  <h4 style="color: #1e293b; margin-bottom: 1rem; font-size: 1.1rem;">Scan QR Code</h4>
+                  <img 
+                    src="assets/qr-code.jpg" 
+                    alt="Registration Form QR Code" 
+                    style="max-width: 200px; border: 3px solid #8b5cf6; border-radius: 0.5rem; padding: 0.5rem; background: white;"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                  />
+                  <p style="display: none; color: #ef4444; font-style: italic; font-size: 0.9rem;">QR Code not available</p>
+                </div>
+                
+                <!-- Direct Link Section -->
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <h4 style="color: #1e293b; margin-bottom: 1rem; font-size: 1.1rem;">Or Open Form Directly</h4>
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?usp=send_form" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style="display: inline-block; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; padding: 0.8rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 700; font-size: 1rem; transition: transform 0.3s ease; box-shadow: 4px 4px 0px #1e293b;"
+                    onmouseover="this.style.transform='scale(1.05)'"
+                    onmouseout="this.style.transform='scale(1)'">
+                    🔗 Open Form in New Tab
+                  </a>
+                </div>
+              </div>
+            </div>
             
             <!-- Fallback Option: QR Code & Direct Link -->
             <div id="formFallback" style="display: none; text-align: center; padding: 2rem; background: white; border-radius: 0.5rem;">
@@ -1221,7 +1294,7 @@
                 <h4 style="color: #1e293b; margin-bottom: 1rem;">Or Click the Link Below</h4>
                 <a 
                   id="directFormLink" 
-                  href="https://docs.google.com/forms/d/e/INVALID_FORM_ID_FOR_TESTING/viewform" 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?usp=send_form" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   style="display: inline-block; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s ease; box-shadow: 4px 4px 0px #1e293b;"
@@ -1314,7 +1387,7 @@
               <h3>Follow Us</h3>
               <div class="social-links">
                 <a
-                  href="#"
+                  href="https://m.facebook.com/manashaktiresearchcentrelonavla/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="social-link"
@@ -1325,18 +1398,18 @@
                     ></path></svg
                 ></a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UC2LM6zmd2jA1Mw-E18P0coA"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="social-link"
                 >
                   <svg fill="currentColor" viewbox="0 0 24 24">
                     <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
                     ></path></svg
                 ></a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/manashaktilonavla/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="social-link"
@@ -1357,9 +1430,9 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <p>© 2024 Fest Yuva Nirman. All rights reserved.</p>
+            <p>© 2025 Fest Yuva Nirman. All rights reserved.</p>
             <p class="footer-tagline">
-              ✨ Crafted with passion by the Fest Yuva Nirman Dev Team 💙
+              ✨ Crafted with passion by <a href="http://Mkitos.codeberg.page" style="color: #8b5cf6; font-weight: 700; text-decoration: none; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; transition: all 0.3s ease; border-bottom: 2px solid #8b5cf6; padding-bottom: 2px;" onmouseover="this.style.borderBottomColor='#ec4899'; this.style.transform='scale(1.05)'" onmouseout="this.style.borderBottomColor='#8b5cf6'; this.style.transform='scale(1)'">.MKITOS</a> 
               Building the future, one line of code at a time 🚀
             </p>
           </div>
