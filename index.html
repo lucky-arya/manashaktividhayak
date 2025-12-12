@@ -561,6 +561,52 @@
           height: 1000px;
           min-height: 100vh;
         }
+
+        /* Responsive About Section */
+        .about-split-layout {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+        }
+
+        .about-card {
+          padding: 1.5rem !important;
+        }
+
+        /* Responsive Footer */
+        .footer-grid {
+          grid-template-columns: 1fr !important;
+          gap: 2rem;
+          text-align: center;
+        }
+
+        .footer-section {
+          padding: 0 1rem;
+        }
+
+        .footer-item {
+          flex-direction: column;
+          gap: 0.75rem;
+          text-align: center;
+        }
+
+        .footer-item span {
+          font-size: 0.9rem;
+          word-break: break-word;
+        }
+
+        .social-links {
+          justify-content: center;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+
+        .footer-tagline {
+          font-size: 0.85rem;
+        }
       }
 
       @media (max-width: 480px) {
@@ -573,6 +619,50 @@
         .form-iframe-container iframe {
           height: 900px;
           min-height: 100vh;
+        }
+
+        /* Mobile optimization for About Section */
+        .about-split-layout {
+          gap: 1.5rem !important;
+        }
+
+        .about-card {
+          padding: 1.25rem !important;
+        }
+
+        .about-card h3 {
+          font-size: 1.5rem !important;
+        }
+
+        /* Mobile Footer Optimization */
+        .footer-section {
+          padding: 0 0.5rem;
+        }
+
+        .footer-section h3 {
+          font-size: 1.25rem;
+        }
+
+        .footer-item {
+          font-size: 0.85rem;
+        }
+
+        .footer-item svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        .social-link {
+          width: 35px;
+          height: 35px;
+        }
+
+        .footer-bottom p {
+          font-size: 0.8rem;
+        }
+
+        .footer-tagline {
+          font-size: 0.75rem !important;
         }
       }
 
@@ -1143,9 +1233,9 @@
             Join us this year for <strong style="color: #8b5cf6;">Fest Yuva Nirman</strong>, where creativity, community, and social good come together.
           </p>
           
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+          <div class="about-split-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
             <!-- Left Side: Why Join -->
-            <div style="padding: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #f97316; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);">
+            <div class="about-card" style="padding: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #f97316; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);">
               <h3 style="font-size: 1.8rem; color: #f97316; margin-bottom: 1.5rem; font-family: 'Nohemi', sans-serif;">Why Join?</h3>
               <p style="margin-bottom: 1.5rem; color: #1e293b; line-height: 1.8;">Start 2026 with purpose. Fest Yuva Nirman lets you:</p>
               <ul style="list-style: none; padding: 0; margin: 0;">
@@ -1165,7 +1255,7 @@
             </div>
             
             <!-- Right Side: Unlimited Participation -->
-            <div style="padding: 2rem; background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%); border-radius: 1rem; border: 2px solid #8b5cf6; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);">
+            <div class="about-card" style="padding: 2rem; background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%); border-radius: 1rem; border: 2px solid #8b5cf6; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);">
               <h3 style="font-size: 1.8rem; color: #8b5cf6; margin-bottom: 1.5rem; font-family: 'Nohemi', sans-serif;">Unlimited Participation</h3>
               <p style="margin-bottom: 1.5rem; color: #1e293b; line-height: 1.8;">Explore as many competitions as you like — individually or with your team. No limits, just creativity.</p>
               <ul style="list-style: none; padding: 0; margin: 0;">
@@ -1782,7 +1872,7 @@
         {
           id: 5,
           category: "expert",
-          participationType: "Solo",
+          participationType: "Solo/Team",
           title: "Expert's Experience",
           description: "Talk Show - Share your expertise and experiences",
           difficulty: "Medium",
