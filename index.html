@@ -1160,6 +1160,7 @@
             <button class="filter-btn" data-filter="influencer">Influencer in You</button>
             <button class="filter-btn" data-filter="hackathon">Hackathon</button>
             <button class="filter-btn" data-filter="beats">Moves on Beats</button>
+            <button class="filter-btn" data-filter="expert">Expert's Experience</button>
           </div>
           <div class="problem-cards" id="problemCards"></div>
         </div>
@@ -1457,6 +1458,20 @@
           difficulty: "Medium",
           details: {
             statement: "Express your creativity through various art forms celebrating joy of giving and gratitude.",
+            topics: [
+              {
+                title: "Drawing & Painting - Joy of giving",
+                description: "Create artwork through drawing and painting celebrating the theme of joy of giving"
+              },
+              {
+                title: "Sculpture & Clay Work - Joy of giving",
+                description: "Create sculptures using clay work celebrating the theme of joy of giving"
+              },
+              {
+                title: "Rangoli - Gratitude",
+                description: "Create traditional Rangoli designs celebrating the theme of gratitude"
+              }
+            ],
             keyIssues: [
               "Drawing & Painting on Joy of giving",
               "Sculpture & Clay Work on Joy of giving",
@@ -1484,6 +1499,16 @@
           difficulty: "Medium",
           details: {
             statement: "Create engaging reels that inspire, spread positivity, and showcase creativity through short-form video content.",
+            topics: [
+              {
+                title: "Make Someone Smile",
+                description: "Create a 20-60 second reel that brings joy and happiness to viewers"
+              },
+              {
+                title: "A Day at Manashakti",
+                description: "Create a 20-60 second reel reflecting positivity, learning, or inspiring moments at Manashakti"
+              }
+            ],
             keyIssues: [
               "Topic A: Make Someone Smile - Create content that brings joy and happiness",
               "Topic B: A Day at Manashakti - Reflect positivity, learning, or inspiring moments at Manashakti",
@@ -1524,15 +1549,15 @@
                 title: "1. Website UI/UX - The 'Clutter' Problem",
                 statement: "The current www.manashakti.org website visitors suffer from confusion during booking, information overload and structural complexity. Users, especially on mobile devices, cannot find key resources, driving users away.",
                 keyIssues: [
-                  "Content discoverability issues (events, books, courses, experiments)",
-                  "Complex navigation structure leading to difficulty in finding required things",
-                  "Overloaded pages with dense text, outdated layouts, or unclear pathways",
-                  "Low mobile responsiveness in certain sections",
-                  "Lack of personalization for different user groups—youth, researchers, families, wellness seekers",
-                  "Limited accessibility features for people with disabilities",
-                  "Search functionality not optimized for keywords, interests, or user intent",
-                  "Missing engagement tools such as chatbots",
-                  "Booking Complexity: Multi-step workflows create friction and user drop-offs"
+                  "1. Content discoverability issues (events, books, courses, experiments)",
+                  "2. Complex navigation structure leading to difficulty in finding required things",
+                  "3. Overloaded pages with dense text, outdated layouts, or unclear pathways",
+                  "4. Low mobile responsiveness in certain sections",
+                  "5. Lack of personalization for different user groups—youth, researchers, families, wellness seekers",
+                  "6. Limited accessibility features for people with disabilities",
+                  "7. Search functionality not optimized for keywords, interests, or user intent",
+                  "8. Missing engagement tools such as chatbots",
+                  "9. Booking Complexity: Multi-step workflows create friction and user drop-offs"
                 ],
                 expectedSolution: "Wireframes / Live prototype (MVP) / Working model (Completed Solution)"
               },
@@ -1540,63 +1565,79 @@
                 title: "2. Manatarang App UI/UX - The 'Ease' Problem",
                 statement: "The Manatarang app delivers guided meditation, wellness content and animated Sanskar Stories for Kids. However, feedback and analytics indicate that users face several challenges, resulting in lower engagement and low conversion from free to paid features.",
                 keyIssues: [
-                  "User Onboarding & Navigation: Users find initial onboarding unclear, leading to drop-offs during sign-up",
-                  "Navigation menus are not easy, causing difficulty in discovering key features",
-                  "User Engagement Challenges: Lack of personalized recommendations based on history, mood, or wellness goals",
-                  "Not well categorized for different age groups, interests, or goals",
-                  "Limited motivation/feedback elements such as streaks, progress trackers, or habit journeys",
-                  "Conversion Barriers (Free → Paid): Users do not clearly understand the value difference",
-                  "Premium purchase flow requires simplification",
-                  "Technical & Performance: Speed optimization needed for certain devices",
-                  "Static Search: Search functionality is limited and does not support intent-based results",
-                  "UI & Visual Identity: Inconsistent visual identity, overwhelming interface, dated aesthetics"
+                  "1. User Onboarding & Navigation",
+                  "• Users find initial onboarding unclear, leading to drop-offs during sign-up.",
+                  "• Navigation menus are not easy, causing difficulty in discovering key features such as courses, meditation tools, and purchase options.",
+                  "2. User Engagement Challenges",
+                  "• Lack of personalized recommendations based on history, mood, or wellness goals and not well categorized for different age groups, interests, or goals.",
+                  "• Limited motivation/feedback elements such as streaks, progress trackers, or habit journeys.",
+                  "3. Conversion Barriers (Free → Paid)",
+                  "• Users do not clearly understand the value difference between free and paid versions.",
+                  "• Premium purchase flow requires simplification.",
+                  "• The app needs easy reminders and pop-ups that guide users at the right moment.",
+                  "4. Technical & Performance Challenges",
+                  "• Speed optimization needed for certain devices.",
+                  "• Offline mode or data-lite features may improve user retention.",
+                  "• Some users report session interruptions during meditation playback.",
+                  "• Static Search: Search functionality is limited and does not support intent-based or keyword-optimized results.",
+                  "5. UI & Visual Identity Enhancement",
+                  "• Inconsistent Visual Identity: The layout lacks a modern, youth-friendly aesthetic, often feeling cluttered rather than calming.",
+                  "• Overwhelming Interface: A cluttered layout makes the app feel less calming, detracting from the core meditation experience.",
+                  "• Dated Aesthetics: The visual design does not reflect a 'premium' feel, impacting user trust and the perceived value of paid subscriptions."
                 ],
                 expectedSolution: "Wireframes / Live prototype (MVP) / Working model (Completed Solution)"
               },
               {
                 title: "3. Magazine Subscription - The 'Conversion' Problem",
-                statement: "Manashakti's Monthly Magazine (35,000+ subscribers, 1,00,000+ readers) has been facing a decline in subscriber retention and irregular renewal patterns.",
+                statement: "Declining Subscription & Renewal Challenges of Manashakti Monthly Magazine. Manashakti's Monthly Magazine has been a trusted source of thought leadership, reflects combination of science and philosophy, research-based insights, and practical life solutions for more than 48 years. With over 35,000 active subscribers and more than 1,00,000 readers, it has a strong and loyal audience base across India and abroad. We also have a special Diwali Issue for kids, started from 2014. Colourful, attractive, full of stories, poems, jokes and special articles from renowned writers as well as kids themselves. However, in recent years, the magazine has been facing a decline in subscriber retention and irregular renewal patterns, impacting both readership continuity.",
                 keyIssues: [
-                  "Discovery & Awareness: Subscription offerings not highlighted clearly",
-                  "Benefits of subscribing vs. reading free content not strongly communicated",
-                  "New users don't know how or where to register digitally",
-                  "Renewal Challenges: Lack of timely reminders via SMS, email, or WhatsApp",
-                  "Complicated or unclear renewal process, especially for senior readers",
-                  "Missing auto-renewal options or easy digital payment pathways",
-                  "Manual Tracking: No real-time system to monitor magazine dispatch",
-                  "Address Inaccuracy: Outdated or manual entry causes failed deliveries",
-                  "Zero Visibility: Subscribers have no way to track their magazine status"
+                  "Discovery & Awareness Issues",
+                  "For new users:",
+                  "• The subscription offerings are not highlighted clearly.",
+                  "• Benefits of subscribing (vs. reading free content) are not strongly communicated.",
+                  "• Do not know how or where to register digitally.",
+                  "Renewal Challenges",
+                  "Many long-term subscribers fail to renew on time or forget altogether, caused by:",
+                  "• Lack of timely reminders via SMS, email, or WhatsApp.",
+                  "• Complicated or unclear renewal process, especially for senior readers.",
+                  "• Missing auto-renewal options or easy digital payment pathways.",
+                  "• Are not aware that their subscription is about to expire.",
+                  "• Forget the exact renewal date or lose printed reminders.",
+                  "• Do not know how or where to renew digitally.",
+                  "• Manual Tracking: The organisation currently lacks a real-time system to monitor magazine dispatch, leading to delivery delays or losses.",
+                  "• Address Inaccuracy: Outdated or manual entry of addresses causes failed deliveries and increased shipping costs.",
+                  "• Zero Visibility: Subscribers have no way to track their magazine status, leading to frequent support inquiries."
                 ],
                 expectedSolution: "Proposal presentation / Any Technological Solution - Wireframe / MVP / Completed Solution"
               },
               {
                 title: "4. Manashakti Suggested Methods - The 'Impact Tracking' Problem",
-                statement: "Manashakti offers diverse solutions across age groups, yet lacks a centralized system to track user implementation and long-term progress. Without a digital logging mechanism, valuable impact data isn't documented.",
+                statement: "Manashakti offers diverse solutions across age groups, yet lacks a centralized system to track user implementation and long-term progress. Without a digital logging mechanism, valuable impact data isn't documented, preventing the organization from visualizing success metrics and also preventing users from seeing their own growth.",
                 keyIssues: [
-                  "Digital Data Fragmentation: Success metrics manually recorded, preventing scalable data analysis",
-                  "Lack of Self-Monitoring: Without tools to log daily habits or see visual rewards, users struggle with discipline",
-                  "Absence of Admin Oversight: Need real-time data to monitor program effectiveness",
-                  "Information Silos: Results not easily shareable between user and research centre",
-                  "Disconnected User Experience: No 'Personal Growth Hub' consolidating activities, test results, implementation history",
-                  "Privacy Barriers: Users hesitant to log sensitive wellness data without clear privacy protocols"
+                  "1. Digital Data Fragmentation: Valuable success metrics and long-term implementation results are currently manually recorded, preventing scalable data analysis.",
+                  "2. Lack of Self-Monitoring and Feedback Loops: Without simple tools to log daily habits or see visual rewards, users find it hard to stay disciplined and cannot see how their efforts improve their well-being.",
+                  "3. Absence of Admin Oversight: The organization needs real-time data to monitor which programs are most effective or which age groups are most active.",
+                  "4. Information Silos: Results and success stories are not easily shareable between the user and the research centre, hindering the collection of research-grade data.",
+                  "5. Disconnected User Experience: Users consume Manashakti's content but do not have a 'Personal Growth Hub' that consolidates their activities, test results, and implementation history.",
+                  "6. Privacy and Trust Barriers: Users are hesitant to log sensitive wellness data without explicit, high-standard digital privacy protocols and clear data-ownership policies."
                 ],
-                expectedSolution: "Web/Mobile/Wireframe Logging App + Admin Data Tracking Interface + Growth Summary Reports"
+                expectedSolution: "Expected Solutions:<br><br>• Web/Mobile/Wireframe Logging App: A lightweight, user-friendly interface for logging daily wellness tasks and 'Sanskar' implementation.<br><br>• Must have Admin Data Tracking Interface: A high-level visualization tool for the research centre to track geographic, demographic, and program/solution-wise impact.<br><br>• Reports: Capability to generate 'Growth Summary' for users to see their personal journey over months or years.<br><br><br>Below information/PDF/Docs contains details of all manashakti products and their using age group tier:<br><a href='https://docs.google.com/document/d/12rj4qR0jMkWrcXk8-8pgS99pvIthukdbgDv9DiKigiU/edit?usp=sharing' target='_blank' style='color: #f97316; background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px; border: 2px solid #f97316; transition: all 0.3s ease;'>📄 Click here to view Manashakti Products & Age Group Details</a>"
               },
               {
                 title: "5. Manashakti Wisdom - The 'Discovery' Problem (AI-Based Solution Required)",
-                statement: "Manashakti has 250+ books based on 50+ years of research, but accessing the right wisdom at the right time is a major challenge. Users can't quickly find which book, chapter, or paragraph addresses their specific problem.",
+                statement: "Manashakti possesses a vast library of audio/text knowledge, but it is buried under poor categorization. Users cannot search by 'Mood,' 'Interest,' or 'Age Group,' making the wisdom inaccessible to modern youth. Manashakti has published 250+ books based on over 50 years of scientific research, blending science, philosophy, and spirituality. These books cover life from prenatal development to life after death, guiding people of all ages, genders, religions, regions, and languages towards: Personal development, Family and social harmony, National well-being, and Global well-being. This Manashakti wisdom has already helped lakhs of people worldwide bring powerful, positive changes in their lives. However, accessing the right wisdom at the right time is a major challenge today.",
                 keyIssues: [
-                  "Users don't know which book has the solution to their problem",
-                  "Even if they know the book, they don't know which chapter is relevant",
-                  "Must physically go to library or search through books manually",
-                  "Time-consuming and overwhelming, especially for new readers",
-                  "AI Accuracy Risk: General AI solutions provide generic advice not aligned with Manashakti's methodologies",
-                  "Need Natural Language Processing to understand user questions in simple language",
-                  "Must map questions to right wisdom and provide specific, actionable guidance",
-                  "Support both English & Marathi languages",
-                  "Example use-cases: Decision-making (5 principles), Study planning, Exam stress, Virtues-vices analysis"
+                  "Key Issue: Search bar is weak; content is hard to discover.",
+                  "Goal: A Smart Search Engine that tags content (e.g., 'Wisdom for Anxiety').",
+                  "AI Accuracy Risk: General AI solutions often provide generic or conflicting advice that does not align with Manashakti's specific research and methodologies.",
+                  "1. Core Problem – Wisdom Exists, But Is Hard to Access",
+                  "They don't know which book has the solution.",
+                  "Even if they know the book, they don't know which chapter is relevant.",
+                  "They must: Go to the library at Manashakti main centre or sub-centre, or Search through the physical Manashakti books they own, Read the index, guess the right chapter, Then read multiple pages or chapters to find the exact solution.",
+                  "This process is: Time-consuming, Overwhelming especially for new readers, Difficult for people who live far away or prefer digital/instant solutions.",
+                  "As a result, many people who need Manashakti's guidance right now cannot quickly connect to the exact wisdom meant for them."
                 ],
-                expectedSolution: "AI-Based Solution (Mandatory): Wireframes / Live prototype (MVP) / Working model"
+                expectedSolution: "AI-Based Solution (Mandatory): Wireframes / Live prototype (MVP) / Working model. Must use NLP to understand questions in simple language, map to relevant books/chapters/paragraphs, and provide specific actionable guidance in English & Marathi"
               },
               {
                 title: "6. Seeding Success - Plan for Self Excellence - The 'Retention' Problem",
@@ -1606,9 +1647,11 @@
                   "No digital habit tracker available",
                   "No goal setting module",
                   "No progress visualization or graphs",
-                  "Users cannot see their improvement over time"
+                  "Users cannot see their improvement over time",
+                  "Need digital tracking for daily progress",
+                  "Require visualization tools for habit-building journey"
                 ],
-                expectedSolution: "Digital Habit Tracker & Goal Setter module with progress graphs and visualization"
+                expectedSolution: "Digital Habit Tracker & Goal Setter module with progress graphs and visualization. Must include feedback loops, goal setting features, and visual progress indicators"
               },
               {
                 title: "7. Mind Gym - The 'Engagement' Problem",
@@ -1618,9 +1661,11 @@
                   "No gamification elements",
                   "No brain exercises or mental challenges",
                   "Nothing to keep youth engaged daily",
-                  "Missing competitive elements like leaderboards"
+                  "Missing competitive elements like leaderboards",
+                  "Passive wellness exercises need interactive transformation",
+                  "Youth demographic requires engaging, game-like mental challenges"
                 ],
-                expectedSolution: "Gamified Brain Exercises (e.g., Focus tests, Memory games) with leaderboards and daily challenges"
+                expectedSolution: "Gamified Brain Exercises (e.g., Focus tests, Memory games, Attention challenges) with leaderboards, daily challenges, and competitive elements to engage youth"
               }
             ],
             keyIssues: [
@@ -1658,6 +1703,16 @@
           difficulty: "Medium",
           details: {
             statement: "Showcase Indian culture through dance performances.",
+            topics: [
+              {
+                title: "Folk Dance - Indian Culture",
+                description: "Perform traditional folk dance showcasing Indian cultural heritage"
+              },
+              {
+                title: "Classical Dance - Indian Tradition",
+                description: "Perform classical or semi-classical dance celebrating Indian tradition"
+              }
+            ],
             keyIssues: [
               "Celebrate Indian cultural heritage",
               "Express creativity through dance",
@@ -1684,6 +1739,12 @@
           difficulty: "Medium",
           details: {
             statement: "Share knowledge and experiences through talk shows.",
+            topics: [
+              {
+                title: "Talk Show - Share Your Expertise",
+                description: "Present your expertise and experiences to inspire youth with meaningful content"
+              }
+            ],
             keyIssues: [
               "Share expertise in your field",
               "Inspire youth through experiences",
@@ -1743,52 +1804,180 @@
           console.error('problemCards container not found');
           return;
         }
-        const filteredProblems =
-          currentFilter === "all"
-            ? problems
-            : problems.filter((p) => p.category === currentFilter);
-
+        
         const colors = ["#f97316", "#8b5cf6", "#10b981", "#ec4899", "#f59e0b"];
+        let cards = [];
 
-        container.innerHTML = filteredProblems
-          .map((problem, index) => {
-            const bgColor = colors[index % colors.length];
+        // "All" button: Show category cards (one per event)
+        if (currentFilter === "all") {
+          cards = problems.map((problem, index) => ({
+            eventId: problem.id,
+            title: problem.title,
+            description: problem.description,
+            bgColor: colors[index % colors.length],
+            category: problem.category,
+            participationType: problem.participationType
+          }));
+        } else {
+          // Specific category filter: Show topic cards
+          const filteredProblems = problems.filter((p) => p.category === currentFilter);
+          
+          let cardIndex = 0; // Track card index for color variation
+          filteredProblems.forEach((problem) => {
+            
+            // For hackathon, show problem statements as topic cards
+            if (problem.category === 'hackathon' && problem.details.problemStatements) {
+              problem.details.problemStatements.forEach((ps, psIndex) => {
+                cards.push({
+                  eventId: problem.id,
+                  problemStatementIndex: psIndex, // Track which problem statement this card represents
+                  title: ps.title,
+                  description: ps.statement.substring(0, 120) + '...',
+                  bgColor: colors[cardIndex % colors.length],
+                  category: problem.category,
+                  participationType: problem.participationType
+                });
+                cardIndex++;
+              });
+            } else if (problem.details && problem.details.topics) {
+              // For events with defined topics array, show topic cards
+              problem.details.topics.forEach((topic, topicIndex) => {
+                cards.push({
+                  eventId: problem.id,
+                  problemStatementIndex: topicIndex, // Track which topic this card represents
+                  topicTitle: topic.title, // Store the topic title
+                  title: topic.title, // Use the specific topic title
+                  description: topic.description,
+                  bgColor: colors[cardIndex % colors.length],
+                  category: problem.category,
+                  participationType: problem.participationType
+                });
+                cardIndex++;
+              });
+            } else if (problem.details && problem.details.keyIssues) {
+              // For other events, show key issues as topic cards (fallback)
+              problem.details.keyIssues.slice(0, 3).forEach((issue, issueIndex) => {
+                cards.push({
+                  eventId: problem.id,
+                  problemStatementIndex: issueIndex, // Track which topic/issue this card represents
+                  topicTitle: issue, // Store the topic title
+                  title: problem.title,
+                  description: issue,
+                  bgColor: colors[cardIndex % colors.length],
+                  category: problem.category,
+                  participationType: problem.participationType
+                });
+                cardIndex++;
+              });
+            } else {
+              // Fallback: show the event itself as a card
+              cards.push({
+                eventId: problem.id,
+                problemStatementIndex: null,
+                title: problem.title,
+                description: problem.description,
+                bgColor: colors[cardIndex % colors.length],
+                category: problem.category,
+                participationType: problem.participationType
+              });
+              cardIndex++;
+            }
+          });
+        }
+
+        // Render cards
+        container.innerHTML = cards
+          .map((card, index) => {
             const rotation = index % 2 === 0 ? "-1deg" : "1deg";
+            const psIndexAttr = card.problemStatementIndex !== null && card.problemStatementIndex !== undefined 
+              ? `data-ps-index="${card.problemStatementIndex}"` 
+              : '';
             return `
-        <div class="problem-card" style="background-color: ${bgColor}; transform: rotate(${rotation})" data-problem-id="${problem.id}">
+        <div class="problem-card" style="background-color: ${card.bgColor}; transform: rotate(${rotation})" data-event-id="${card.eventId}" data-category="${card.category}" ${psIndexAttr}>
           <div class="problem-header">
-            <span class="problem-badge">${problem.category}</span>
-            <span class="problem-badge" style="margin-left: 0.5rem;">${problem.participationType}</span>
+            <span class="problem-badge">${card.category}</span>
+            <span class="problem-badge" style="margin-left: 0.5rem;">${card.participationType}</span>
           </div>
-          <h3 class="problem-title">${problem.title}</h3>
-          <p class="problem-description">${problem.description}</p>
+          <h3 class="problem-title">${card.title}</h3>
+          <p class="problem-description">${card.description}</p>
           <button class="read-more-btn" style="background-color: rgba(255,255,255,0.3); border: 2px solid white; color: white; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: bold; cursor: pointer; margin-top: 1rem;">Read More →</button>
         </div>
       `;
           })
           .join("");
 
-        // Add click handlers
+        // Add click handlers based on filter
         document.querySelectorAll(".problem-card").forEach((card) => {
           card.addEventListener("click", function (e) {
-            // Only open modal if Read More button or card is clicked (not other interactive elements)
-            const problemId = parseInt(this.dataset.problemId);
-            const problem = problems.find((p) => p.id === problemId);
-            showModal(problem);
+            const category = this.dataset.category;
+            const eventId = parseInt(this.dataset.eventId);
+            const psIndex = this.dataset.psIndex !== undefined ? parseInt(this.dataset.psIndex) : null;
+            
+            // ALWAYS switch to category view when "All" filter is active
+            // NEVER open modal from "All" view
+            if (currentFilter === "all") {
+              // Switch to specific category filter
+              document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+              const targetBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+              if (targetBtn) {
+                targetBtn.classList.add("active");
+              }
+              
+              // Update current filter and re-render to show topic cards
+              currentFilter = category;
+              renderProblems();
+            } 
+            // ONLY open modal when a specific category filter is active
+            else if (currentFilter !== "all") {
+              const problem = problems.find((p) => p.id === eventId);
+              if (problem) {
+                showModal(problem, psIndex);
+              }
+            }
           });
         });
       }
 
       // Show modal
-      function showModal(problem) {
+      function showModal(problem, problemStatementIndex = null) {
         const modal = document.getElementById("modal");
         const modalBody = document.getElementById("modalBody");
 
         // Check if this is a hackathon with multiple problem statements
         const isHackathon = problem.category === 'hackathon' && problem.details.problemStatements;
 
-        if (isHackathon) {
-          // Render hackathon with all problem statements
+        if (isHackathon && problemStatementIndex !== null) {
+          // Render ONLY the specific problem statement that was clicked
+          const ps = problem.details.problemStatements[problemStatementIndex];
+          
+          modalBody.innerHTML = `
+            <div class="modal-badges">
+              <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
+              <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${problem.participationType}</span>
+            </div>
+            
+            <h2 class="modal-title">${ps.title}</h2>
+            
+            <div class="modal-body">
+              <h3>Problem Statement:</h3>
+              <p style="margin-bottom: 1.5rem; font-weight: 600; font-size: 1.1rem;">${ps.statement}</p>
+              
+              <h3>Key Issues:</h3>
+              <ul>
+                ${ps.keyIssues.map(issue => `<li>• ${issue}</li>`).join('')}
+              </ul>
+              
+              <h3 style="margin-top: 2rem;">Expected Solution:</h3>
+              <p style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem;">${ps.expectedSolution}</p>
+              
+              <h3 style="margin-top: 2rem;">General Guidelines & Rules:</h3>
+              <ul>
+                ${problem.details.guidelines.map(guideline => `<li>• ${guideline}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+        } else if (isHackathon) {
+          // Render hackathon with all problem statements (fallback if no specific index)
           const problemStatementsHTML = problem.details.problemStatements.map((ps, index) => `
             <div style="margin-bottom: 2.5rem; padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
               <h3 style="color: #8b5cf6; margin-bottom: 1rem; font-size: 1.4rem;">${ps.title}</h3>
@@ -1848,39 +2037,105 @@
                   .join("")
               : "<li>• Follow event rules and regulations</li><li>• Arrive on time</li><li>• Be creative and original</li>";
 
-          modalBody.innerHTML = `
-            <div class="modal-badges">
-              <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${
-                problem.category
-              }</span>
-            </div>
+          // If a specific topic index is provided, show only that topic
+          if (problemStatementIndex !== null && problem.details && problem.details.topics && problem.details.topics[problemStatementIndex]) {
+            const specificTopic = problem.details.topics[problemStatementIndex];
             
-            <h2 class="modal-title">${problem.title}</h2>
+            modalBody.innerHTML = `
+              <div class="modal-badges">
+                <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
+                <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${problem.participationType}</span>
+              </div>
+              
+              <h2 class="modal-title">${specificTopic.title}</h2>
+              
+              <div class="modal-body">
+                <h3>About Event:</h3>
+                <p>${problem.details.statement}</p>
+                
+                <h3 style="margin-top: 2rem;">About This Topic:</h3>
+                <div style="padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6; margin-bottom: 2rem;">
+                  <p style="font-size: 1.1rem; font-weight: 600; color: #1e293b;">${specificTopic.description}</p>
+                </div>
+                
+                <h3>Expected Deliverables:</h3>
+                <p style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem;">${problem.details.expectedSolution}</p>
+                
+                <h3 style="margin-top: 2rem;">Guidelines:</h3>
+                <ul>
+                  ${guidelinesList}
+                </ul>
+              </div>
+            `;
+          } else if (problemStatementIndex !== null && problem.details && problem.details.keyIssues && problem.details.keyIssues[problemStatementIndex]) {
+            const specificTopic = problem.details.keyIssues[problemStatementIndex];
             
-            <div class="modal-body">
-              <h3>About:</h3>
-              <p>${
-                problem.details ? problem.details.statement : problem.description
-              }</p>
+            modalBody.innerHTML = `
+              <div class="modal-badges">
+                <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
+                <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${problem.participationType}</span>
+              </div>
               
-              <h3>Topics/Areas:</h3>
-              <ul>
-                ${keyIssuesList}
-              </ul>
+              <h2 class="modal-title">${problem.title}</h2>
               
-              <h3>Expected Deliverables:</h3>
-              <p>${
-                problem.details
-                  ? problem.details.expectedSolution
-                  : "Creative submission as per event requirements"
-              }</p>
+              <div class="modal-body">
+                <h3>About Event:</h3>
+                <p>${problem.details ? problem.details.statement : problem.description}</p>
+                
+                <h3 style="margin-top: 2rem;">Specific Topic:</h3>
+                <div style="padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6; margin-bottom: 2rem;">
+                  <p style="font-size: 1.2rem; font-weight: 600; color: #1e293b;">• ${specificTopic}</p>
+                </div>
+                
+                <h3>Expected Deliverables:</h3>
+                <p style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem;">${
+                  problem.details
+                    ? problem.details.expectedSolution
+                    : "Creative submission as per event requirements"
+                }</p>
+                
+                <h3 style="margin-top: 2rem;">Guidelines:</h3>
+                <ul>
+                  ${guidelinesList}
+                </ul>
+              </div>
+            `;
+          } else {
+            // Show all topics/issues (original behavior)
+            modalBody.innerHTML = `
+              <div class="modal-badges">
+                <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${
+                  problem.category
+                }</span>
+              </div>
               
-              <h3>Guidelines:</h3>
-              <ul>
-                ${guidelinesList}
-              </ul>
-            </div>
-          `;
+              <h2 class="modal-title">${problem.title}</h2>
+              
+              <div class="modal-body">
+                <h3>About:</h3>
+                <p>${
+                  problem.details ? problem.details.statement : problem.description
+                }</p>
+                
+                <h3>Topics/Areas:</h3>
+                <ul>
+                  ${keyIssuesList}
+                </ul>
+                
+                <h3>Expected Deliverables:</h3>
+                <p>${
+                  problem.details
+                    ? problem.details.expectedSolution
+                    : "Creative submission as per event requirements"
+                }</p>
+                
+                <h3>Guidelines:</h3>
+                <ul>
+                  ${guidelinesList}
+                </ul>
+              </div>
+            `;
+          }
         }
 
         modal.classList.add("show");
