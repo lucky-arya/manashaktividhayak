@@ -251,9 +251,15 @@
 
       .hero-content {
         max-width: 1280px;
+        width: 100%;
+        padding: 0 2rem;
         text-align: center;
         position: relative;
         z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       .hero-title {
@@ -282,8 +288,9 @@
         opacity: 0.9;
         color: #8b5cf6;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-        transform: rotate(1deg);
         font-family: "Nohemi", sans-serif;
+        max-width: 600px;
+        line-height: 1.5;
       }
 
       .event-info {
@@ -293,6 +300,8 @@
         justify-content: center;
         gap: 1rem;
         margin-bottom: 3rem;
+        width: 100%;
+        max-width: 600px;
       }
 
       .event-item {
@@ -317,10 +326,14 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
         justify-content: center;
+        width: 100%;
+        max-width: 400px;
       }
 
       .btn {
+        width: 100%;
         padding: 1rem 2rem;
         font-size: 1.125rem;
         font-weight: bold;
@@ -329,6 +342,7 @@
         cursor: pointer;
         transition: all 0.3s ease;
         font-family: "Nohemi", sans-serif;
+        text-align: center;
       }
 
       .btn:hover {
@@ -438,7 +452,7 @@
       }
 
       .filter-btn.active {
-        background-color: #f97316;
+        background-color: #ec4899;
         color: #ffffff;
       }
 
@@ -565,7 +579,7 @@
         font-size: 1.25rem;
         font-weight: bold;
         border-radius: 0.75rem;
-        background-color: #f97316;
+        background-color: #ec4899;
         color: #ffffff;
         border: none;
         cursor: pointer;
@@ -879,15 +893,20 @@
         <div class="nav-container">
           <div class="logo-section">
             <img
+              src="assets/Logo Manashakti .png"
+              alt="Manashakti Logo"
+              class="org-logo"
+              style="margin-right: 0.5rem; transform: rotate(90deg);"
+            />
+            <img
               src="assets/Fest Yuva Nirmaan Logo.png"
               alt="Fest Yuva Nirman Logo"
               class="org-logo"
             />
-            <div class="logo-text">Fest Yuva Nirman</div>
           </div>
           <div class="nav-links">
             <a href="#home" class="nav-link">Home</a>
-            <a href="#problems" class="nav-link">Problem Statements</a>
+            <a href="#problems" class="nav-link">Events</a>
             <a href="#register" class="nav-link">Registration</a>
             <a href="#faq" class="nav-link">FAQ</a>
             <a href="#contact" class="nav-link">Contact Us</a>
@@ -910,7 +929,7 @@
           </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-          <a href="#home">Home</a> <a href="#problems">Problem Statements</a>
+          <a href="#home">Home</a> <a href="#problems">Events</a>
           <a href="#register">Registration</a> <a href="#faq">FAQ</a>
           <a href="#contact">Contact Us</a>
         </div>
@@ -935,8 +954,11 @@
           <polygon points="30,5 55,50 5,50" fill="#8b5cf6" />
         </svg>
         <div class="hero-content">
-          <h1 class="hero-title" id="heroTitle">Fest Yuva Nirman Hackathon</h1>
-          <p class="hero-subtitle">Empowering Youth Through Innovation</p>
+          <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+            <!-- <img src="assets/Logo Manashakti .png" alt="Manashakti" style="max-width: 120px; width: 100%; height: auto; transform: rotate(90deg);" /> -->
+            <img src="assets/Fest Yuva Nirmaan Logo.png" alt="Fest Yuva Nirman" style="max-width: 350px; width: 100%; height: auto;" />
+          </div>
+          <p class="hero-subtitle" style="margin-top: 1rem;">New Year Celebration with Great Cause</p>
           <div class="event-info">
             <div class="event-item">
               <svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
@@ -970,7 +992,7 @@
               Register Now
             </button>
             <button class="btn btn-secondary" id="viewProblemsBtn">
-              View Problem Statements
+              View Events
             </button>
           </div>
         </div>
@@ -980,29 +1002,23 @@
         <div class="section-container">
           <h2 class="section-title">About the Event</h2>
           <p class="section-text">
-            Join Manashakti Youth Festival Hackathon on 31st December 2025 at
-            Manashanti Kendra, Lonavala. Solve real-world problems in UI/UX, AI,
-            subscriptions, and wellness tracking for one of India's oldest
-            spiritual research organizations with 35,000+ subscribers and 250+
-            books of wisdom. For youth aged 15-25 years.
+            Yes! For the past 20 years, Manashakti Research Centre has been celebrating 31st December and welcoming the New Year in a completely unique way, known as Constuctive 31 December! It's a celebration, of course, but behind it lies a great cause, one that can help shape our lives as well as the lives of others. So come, let's celebrate together Fest Yuva Nirman!
           </p>
         </div>
       </section>
       <!-- Problem Statements Section -->
       <section id="problems">
         <div class="problems-container">
-          <h2 class="section-title">Problem Statements</h2>
+          <h2 class="section-title">Events</h2>
+          <p class="section-text" style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+            Participants can register for multiple events as Individual or team.
+          </p>
           <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="uiux">UI/UX</button>
-            <button class="filter-btn" data-filter="subscription">
-              Subscription
-            </button>
-            <button class="filter-btn" data-filter="tracking">Tracking</button>
-            <button class="filter-btn" data-filter="ai">AI</button>
-            <button class="filter-btn" data-filter="engagement">
-              Engagement
-            </button>
+            <button class="filter-btn" data-filter="art">Express in Art</button>
+            <button class="filter-btn" data-filter="influencer">Influencer in You</button>
+            <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+            <button class="filter-btn" data-filter="beats">Moves on Beats</button>
           </div>
           <div class="problem-cards" id="problemCards"></div>
         </div>
@@ -1010,7 +1026,7 @@
       <!-- Registration Section -->
       <section id="register">
         <div class="registration-container">
-          <h2 class="registration-title">Register Your Team</h2>
+          <h2 class="registration-title">Register</h2>
           <form id="registrationForm">
             <div class="form-group">
               <label for="teamName" class="form-label">Team Name</label>
@@ -1066,31 +1082,35 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="problemChoice" class="form-label"
-                >Preferred Problem Statement</label
-              >
-              <select id="problemChoice" class="form-select" required>
-                <option value="">Select a problem</option>
-                <option value="ps1">
-                  Website UI/UX - The "Clutter" Problem
-                </option>
-                <option value="ps2">
-                  Manatarang App UI/UX - The "Ease" Problem
-                </option>
-                <option value="ps3">
-                  Magazine Subscription - The "Conversion" Problem
-                </option>
-                <option value="ps4">
-                  Suggested Methods - The "Impact Tracking" Problem
-                </option>
-                <option value="ps5">
-                  Manashakti Wisdom - The "Discovery" Problem
-                </option>
-                <option value="ps6">
-                  Seeding Success - The "Retention" Problem
-                </option>
-                <option value="ps7">Mind Gym - The "Engagement" Problem</option>
-              </select>
+              <label class="form-label">Select Events (Multiple Selection Allowed)</label>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" name="events" value="art" class="event-checkbox" />
+                  <span>Express in Art</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" name="events" value="influencer" class="event-checkbox" />
+                  <span>Influencer in You</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" name="events" value="hackathon" class="event-checkbox" />
+                  <span>Hackathon</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" name="events" value="beats" class="event-checkbox" />
+                  <span>Moves on Beats</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" name="events" value="expert" class="event-checkbox" />
+                  <span>Expert's Experience</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="agreeTerms" required />
+                <span>I agree to the terms and conditions and code of conduct</span>
+              </label>
             </div>
             <button type="submit" class="submit-btn">
               Submit Registration
@@ -1203,159 +1223,135 @@
       const problems = [
         {
           id: 1,
-          category: "uiux",
-          title: 'Website UI/UX - The "Clutter" Problem',
-          description:
-            "Redesign www.manashakti.org to solve confusion, information overload, and poor mobile responsiveness.",
+          category: "art",
+          title: 'Express in Art',
+          description: "Drawing & Painting - Topic: Joy of giving, Sculpture & Clay Work - Topic: Joy of giving, Rangoli - Topic: Gratitude",
           difficulty: "Medium",
           details: {
-            statement:
-              "The current www.manashakti.org website visitors suffer from confusion during booking, information overload and structural complexity. Users, especially on mobile devices, cannot find key resources, driving users away.",
+            statement: "Express your creativity through various art forms celebrating joy of giving and gratitude.",
             keyIssues: [
-              "Content discoverability issues (events, books, courses, experiments)",
-              "Complex navigation structure",
-              "Overloaded pages with dense text",
-              "Low mobile responsiveness",
-              "Lack of personalization for different user groups",
-              "Limited accessibility features",
-              "Poor search functionality",
-              "Missing engagement tools like chatbots",
-              "Complex booking workflows",
+              "Drawing & Painting on Joy of giving",
+              "Sculpture & Clay Work on Joy of giving",
+              "Rangoli on Gratitude theme"
             ],
-            expectedSolution: "Wireframes, Live prototype (MVP), Working model",
+            expectedSolution: "Creative artwork submissions in respective categories",
+            guidelines: [
+              "Participants must bring their own materials",
+              "Time limit: As per event schedule",
+              "Theme must be clearly reflected in the artwork",
+              "Original work only - no copying"
+            ]
           },
         },
         {
           id: 2,
-          category: "uiux",
-          title: 'Manatarang App UI/UX - The "Ease" Problem',
-          description:
-            "Improve the meditation and wellness app's onboarding, engagement, and conversion from free to paid.",
+          category: "influencer",
+          title: 'Influencer in You',
+          description: "Reel Making - Topic: Joy of giving, Vlog Making - Topic: One day in Manashakti",
           difficulty: "Medium",
           details: {
-            statement:
-              "The Manatarang app delivers guided meditation, wellness content and animated Sanskar Stories for Kids. However, users face challenges resulting in lower engagement and low conversion.",
+            statement: "Create engaging digital content that inspires and influences positively.",
             keyIssues: [
-              "Unclear user onboarding",
-              "Difficult navigation and feature discovery",
-              "Lack of personalized recommendations",
-              "No progress trackers or streaks",
-              "Unclear value proposition for paid version",
-              "Complex premium purchase flow",
-              "Speed optimization needed",
-              "Static search functionality",
-              "Inconsistent visual identity",
+              "Create reels on Joy of giving",
+              "Make vlogs documenting One day in Manashakti"
             ],
-            expectedSolution: "Wireframes, Live prototype (MVP), Working model",
+            expectedSolution: "Video content submissions (Reels/Vlogs)",
+            guidelines: [
+              "Bring your own recording devices",
+              "Maximum duration: Reels 60 seconds, Vlogs 5 minutes",
+              "Content must be appropriate for all ages",
+              "Submit before deadline"
+            ]
           },
         },
         {
           id: 3,
-          category: "subscription",
-          title: 'Magazine Subscription - The "Conversion" Problem',
-          description:
-            "Solve declining subscription renewal for Manashakti's 48-year-old monthly magazine with 35,000+ subscribers.",
+          category: "hackathon",
+          title: 'Hackathon - UI/UX',
+          description: "Topic: Make the user journey easy",
           difficulty: "Hard",
           details: {
-            statement:
-              "Manashakti's Monthly Magazine has over 35,000 active subscribers but faces declining retention and irregular renewal patterns.",
+            statement: "Design and develop solutions to improve user experience and simplify user journeys.",
             keyIssues: [
-              "Subscription offerings not highlighted",
-              "Benefits not clearly communicated",
-              "Lack of timely renewal reminders",
-              "Complicated renewal process",
-              "No auto-renewal options",
-              "Manual tracking of dispatches",
-              "Address inaccuracies causing failed deliveries",
-              "Zero delivery visibility for subscribers",
+              "Improve website navigation and usability",
+              "Enhance mobile responsiveness",
+              "Simplify complex user flows",
+              "Create intuitive interfaces"
             ],
-            expectedSolution:
-              "Proposal presentation, Technological Solution (Wireframe/MVP/Completed)",
+            expectedSolution: "Wireframes, Live prototype (MVP), Working model",
+            guidelines: [
+              "Bring your own laptops and chargers",
+              "Pre-install required software (Figma, design tools)",
+              "Work as a team (1-5 members)",
+              "Final presentation required"
+            ]
           },
         },
         {
           id: 4,
-          category: "tracking",
-          title: 'Suggested Methods - The "Impact Tracking" Problem',
-          description:
-            "Build a centralized system to track user implementation and long-term progress of Manashakti's wellness methods.",
+          category: "hackathon",
+          title: 'Hackathon - AI for Good',
+          description: "Topic: Use AI to spread Manashakti's wisdom worldwide",
           difficulty: "Hard",
           details: {
-            statement:
-              "Manashakti offers diverse solutions but lacks a centralized system to track user implementation and long-term progress.",
+            statement: "Leverage AI technology to make Manashakti's wisdom accessible globally.",
             keyIssues: [
-              "Digital data fragmentation",
-              "Lack of self-monitoring tools",
-              "No visual feedback loops",
-              "Absence of admin oversight",
-              "Information silos between users and research centre",
-              "Disconnected user experience",
-              "Privacy and trust barriers",
+              "AI-powered content discovery",
+              "Natural language processing for wisdom search",
+              "Multilingual support (English & Marathi)",
+              "Personalized recommendations"
             ],
-            expectedSolution:
-              "Logging App (Web/Mobile/Wireframe), Admin tracking interface, Growth summary reports",
+            expectedSolution: "AI-based solution (Wireframes/MVP/Working model)",
+            guidelines: [
+              "Bring your own laptops and development environment",
+              "API access will be provided if needed",
+              "Ethical AI practices must be followed",
+              "Demo required at submission"
+            ]
           },
         },
         {
           id: 5,
-          category: "ai",
-          title: 'Manashakti Wisdom - The "Discovery" Problem',
-          description:
-            "Create an AI-powered search to access wisdom from 250+ books by mood, interest, or age group.",
-          difficulty: "Hard",
+          category: "beats",
+          title: 'Moves on Beats',
+          description: "Dance Show - Topic: Indian Culture",
+          difficulty: "Medium",
           details: {
-            statement:
-              "Manashakti has 250+ books of wisdom but poor categorization makes it inaccessible. Users can't search by mood, interest, or age group.",
+            statement: "Showcase Indian culture through dance performances.",
             keyIssues: [
-              "Users don't know which book has the solution",
-              "Time-consuming to search through physical books",
-              "Overwhelming for new readers",
-              "Weak search functionality",
-              "No natural language question support",
-              "Generic AI solutions provide conflicting advice",
+              "Celebrate Indian cultural heritage",
+              "Express creativity through dance",
+              "Group or solo performances welcome"
             ],
-            expectedSolution:
-              "AI-based search engine with NLP, personalized guidance, English & Marathi support (Wireframes/MVP/Working model)",
+            expectedSolution: "Live dance performance",
+            guidelines: [
+              "Bring your own music (USB/device)",
+              "Performance duration: 5-7 minutes",
+              "Appropriate costumes reflecting Indian culture",
+              "Solo or group (max 10 members)"
+            ]
           },
         },
         {
           id: 6,
-          category: "engagement",
-          title: 'Seeding Success - The "Retention" Problem',
-          description:
-            "Create a digital habit tracker and goal setter for the 'Self Excellence' methodology.",
+          category: "expert",
+          title: "Expert's Experience",
+          description: "Talk Show - Share your expertise and experiences",
           difficulty: "Medium",
           details: {
-            statement:
-              "The Self Excellence methodology exists as theory but lacks a digital tool for tracking daily progress and visualizing habit-building.",
+            statement: "Share knowledge and experiences through talk shows.",
             keyIssues: [
-              "No feedback loop to keep users motivated",
-              "Can't track daily progress",
-              "No goal-setting mechanism",
-              "No progress visualization",
+              "Share expertise in your field",
+              "Inspire youth through experiences",
+              "Engage audience with meaningful content"
             ],
-            expectedSolution:
-              "Digital Habit Tracker & Goal Setter with progress graphs",
-          },
-        },
-        {
-          id: 7,
-          category: "engagement",
-          title: 'Mind Gym - The "Engagement" Problem',
-          description:
-            "Build gamified mental challenges and brain games to keep youth engaged daily.",
-          difficulty: "Medium",
-          details: {
-            statement:
-              "Current wellness exercises are passive. Platform lacks interactive, gamified mental challenges for youth engagement.",
-            keyIssues: [
-              "Static, passive content",
-              "Lack of interactivity",
-              "No gamification elements",
-              "Low daily engagement from youth",
-            ],
-            expectedSolution:
-              "Gamified Brain Exercises (Focus tests, Memory games) with leaderboards",
+            expectedSolution: "Live talk show presentation",
+            guidelines: [
+              "Prepare your presentation (PPT optional)",
+              "Duration: 15-20 minutes",
+              "Topic must be relevant to youth development",
+              "Q&A session will follow"
+            ]
           },
         },
       ];
@@ -1398,6 +1394,10 @@
       // Render problems
       function renderProblems() {
         const container = document.getElementById("problemCards");
+        if (!container) {
+          console.error('problemCards container not found');
+          return;
+        }
         const filteredProblems =
           currentFilter === "all"
             ? problems
@@ -1413,11 +1413,10 @@
         <div class="problem-card" style="background-color: ${bgColor}; transform: rotate(${rotation})" data-problem-id="${problem.id}">
           <div class="problem-header">
             <span class="problem-badge">${problem.category}</span>
-            <span class="problem-difficulty">${problem.difficulty}</span>
           </div>
           <h3 class="problem-title">${problem.title}</h3>
           <p class="problem-description">${problem.description}</p>
-          <p class="problem-cta">Click for more details →</p>
+          <button class="read-more-btn" style="background-color: rgba(255,255,255,0.3); border: 2px solid white; color: white; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: bold; cursor: pointer; margin-top: 1rem;">Read More →</button>
         </div>
       `;
           })
@@ -1425,7 +1424,8 @@
 
         // Add click handlers
         document.querySelectorAll(".problem-card").forEach((card) => {
-          card.addEventListener("click", function () {
+          card.addEventListener("click", function (e) {
+            // Only open modal if Read More button or card is clicked (not other interactive elements)
             const problemId = parseInt(this.dataset.problemId);
             const problem = problems.find((p) => p.id === problemId);
             showModal(problem);
@@ -1445,42 +1445,43 @@
                 .join("")
             : "<li>• User-friendly interface design</li><li>• Scalable architecture</li><li>• Security best practices</li>";
 
+        const guidelinesList =
+          problem.details && problem.details.guidelines
+            ? problem.details.guidelines
+                .map((guideline) => `<li>• ${guideline}</li>`)
+                .join("")
+            : "<li>• Follow event rules and regulations</li><li>• Arrive on time</li><li>• Be creative and original</li>";
+
         modalBody.innerHTML = `
         <div class="modal-badges">
           <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${
             problem.category
-          }</span>
-          <span class="modal-badge" style="background-color: #f97316; color: #1e293b;">${
-            problem.difficulty
           }</span>
         </div>
         
         <h2 class="modal-title">${problem.title}</h2>
         
         <div class="modal-body">
-          <h3>Problem Statement:</h3>
+          <h3>About:</h3>
           <p>${
             problem.details ? problem.details.statement : problem.description
           }</p>
           
-          <h3>Key Issues:</h3>
+          <h3>Topics/Areas:</h3>
           <ul>
             ${keyIssuesList}
           </ul>
           
-          <h3>Expected Solution:</h3>
+          <h3>Expected Deliverables:</h3>
           <p>${
             problem.details
               ? problem.details.expectedSolution
-              : "Wireframes, Working prototype (MVP), Completed Solution"
+              : "Creative submission as per event requirements"
           }</p>
           
-          <h3>Deliverables:</h3>
+          <h3>Guidelines:</h3>
           <ul>
-            <li>• Working prototype or MVP</li>
-            <li>• Technical documentation</li>
-            <li>• Presentation deck</li>
-            <li>• Demo (if applicable)</li>
+            ${guidelinesList}
           </ul>
         </div>
       `;
@@ -1551,6 +1552,10 @@
           renderProblems();
         });
       });
+      
+      // Render problems immediately after setting up event listeners
+      renderProblems();
+      renderFAQ();
 
       // Smooth scrolling
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -1606,11 +1611,20 @@
           const submitBtn = this.querySelector(".submit-btn");
           const successMsg = document.getElementById("successMessage");
 
-          // Get form data
-          const problemSelect = document.getElementById("problemChoice");
-          const selectedProblem = problems.find(
-            (p) => p.id === parseInt(problemSelect.value.replace("ps", ""))
-          );
+          // Get selected events from checkboxes
+          const selectedEvents = Array.from(document.querySelectorAll('.event-checkbox:checked'))
+            .map(cb => cb.value);
+
+          // Validate at least one event is selected
+          if (selectedEvents.length === 0) {
+            successMsg.textContent = "❌ Please select at least one event";
+            successMsg.style.backgroundColor = "#ef4444";
+            successMsg.classList.add("show");
+            setTimeout(() => {
+              successMsg.classList.remove("show");
+            }, 5000);
+            return;
+          }
 
           const formData = {
             teamName: document.getElementById("teamName").value,
@@ -1618,8 +1632,9 @@
             email: document.getElementById("email").value,
             phone: document.getElementById("phone").value,
             teamSize: document.getElementById("teamSize").value,
-            problemChoice: problemSelect.value,
-            problemTitle: selectedProblem ? selectedProblem.title : "",
+            events: selectedEvents,
+            problemChoice: selectedEvents[0], // Use first selected event for backward compatibility
+            problemTitle: selectedEvents.join(", "), // Store all events
           };
 
           // Disable submit button
@@ -1755,9 +1770,8 @@
         });
       });
 
-      // Initialize
-      renderProblems();
-      renderFAQ();
+      // Initialize filter
+      currentFilter = 'all';
     </script>
     <script>
       (function () {
