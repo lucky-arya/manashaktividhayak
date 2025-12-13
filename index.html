@@ -54,6 +54,41 @@
         font-family: "Nohemi", sans-serif;
       }
 
+      /* Custom Scrollbar Styles - Webkit (Chrome, Safari, Edge) */
+      ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, #fef3c7 0%, #e0e7ff 50%, #fce7f3 100%);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        transition: all 0.3s ease;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #ea580c 0%, #db2777 50%, #7c3aed 100%);
+        border: 2px solid #1e293b;
+        box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+      }
+
+      ::-webkit-scrollbar-thumb:active {
+        background: linear-gradient(135deg, #c2410c 0%, #be185d 50%, #6d28d9 100%);
+      }
+
+      /* Firefox Scrollbar */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #f97316 #fef3c7;
+      }
+
       #app {
         width: 100%;
         height: 100%;
@@ -557,6 +592,28 @@
         display: block;
       }
 
+      /* Custom scrollbar for iframe container */
+      .form-iframe-container::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      .form-iframe-container::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, #fef3c7 0%, #e0e7ff 100%);
+        border-radius: 5px;
+      }
+
+      .form-iframe-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+        border-radius: 5px;
+        border: 2px solid #ffffff;
+      }
+
+      .form-iframe-container::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #ea580c 0%, #db2777 50%, #7c3aed 100%);
+        box-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
+      }
+
       /* Responsive iframe for mobile */
       @media (max-width: 768px) {
         .form-iframe-container {
@@ -1006,6 +1063,28 @@
         overflow-y: auto;
         position: relative;
         border: 4px solid #8b5cf6;
+      }
+
+      /* Custom scrollbar for modal */
+      .modal-content::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .modal-content::-webkit-scrollbar-track {
+        background: #f3f4f6;
+        border-radius: 5px;
+        margin: 10px 0;
+      }
+
+      .modal-content::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+        border-radius: 5px;
+        border: 2px solid #ffffff;
+      }
+
+      .modal-content::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #ea580c 0%, #db2777 50%, #7c3aed 100%);
+        box-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
       }
 
       @media (min-width: 1024px) {
