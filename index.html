@@ -976,6 +976,7 @@
       .footer-item svg {
         width: 20px;
         height: 20px;
+        flex-shrink: 0;
         color: #1e293b;
       }
 
@@ -1187,6 +1188,25 @@
 
         .footer-grid {
           grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-item {
+          justify-content: flex-start;
+          text-align: left;
+        }
+
+        .footer-item svg {
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+        }
+
+        .footer-section {
+          text-align: left;
+        }
+
+        .footer-section h3 {
+          text-align: left;
         }
       }
 
@@ -2114,7 +2134,7 @@
           <div class="footer-bottom">
             <p>© 2025 Fest Yuva Nirman. All rights reserved.</p>
             <p class="footer-tagline">
-              ✨ Crafted with passion by
+              ✨ Built in 2 hours, debugged for 2 days - thanks,
               <a
                 href="http://Mkitos.codeberg.page"
                 style="
@@ -2131,9 +2151,8 @@
                 "
                 onmouseover="this.style.borderBottomColor='#ec4899'; this.style.transform='scale(1.05)'"
                 onmouseout="this.style.borderBottomColor='#8b5cf6'; this.style.transform='scale(1)'"
-                >.MKITOS</a
+                >.MKITOS </a
               >
-              Building the future, one line of code at a time 🚀
             </p>
           </div>
         </div>
