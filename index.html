@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fest Yuva Nirman Hackathon</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    
     <style>
       body {
         box-sizing: border-box;
@@ -560,6 +568,13 @@
         .form-iframe-container iframe {
           height: 1000px;
           min-height: 100vh;
+        }
+
+        /* Responsive Hero Logo Image */
+        .hero-content img[alt="Fest Yuva Nirman"] {
+          max-width: 100% !important;
+          height: auto !important;
+          min-height: 200px;
         }
 
         /* Responsive About Section */
@@ -1127,7 +1142,7 @@
               src="assets/Logo Manashakti .png"
               alt="Manashakti Logo"
               class="org-logo"
-              style="transform: rotate(90deg);"
+              style="transform: rotate(90deg)"
             />
           </div>
           <div class="nav-links">
@@ -1180,11 +1195,29 @@
           <polygon points="30,5 55,50 5,50" fill="#8b5cf6" />
         </svg>
         <div class="hero-content">
-          <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+              margin-bottom: 1.5rem;
+              flex-wrap: wrap;
+            "
+          >
             <!-- <img src="assets/Logo Manashakti .png" alt="Manashakti" style="max-width: 120px; width: 100%; height: auto; transform: rotate(90deg);" /> -->
-            <img src="assets/Fest Yuva Nirmaan Logo.png" alt="Fest Yuva Nirman" style="max-width: 850px; width: 100%; height: 30rem;" />
+            <img
+              src="assets/Fest Yuva Nirmaan Logo.png"
+              alt="Fest Yuva Nirman"
+              style="max-width: 850px; width: 100%; height: 24rem"
+            />
           </div>
-          <p class="hero-subtitle" style="margin-top: 0.5rem; font-size: 1.75rem;">New Year Celebration with Great Cause</p>
+          <p
+            class="hero-subtitle"
+            style="margin-top: 0.5rem; font-size: 1.75rem"
+          >
+            New Year Celebration with Great Cause
+          </p>
           <div class="event-info">
             <div class="event-item">
               <svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
@@ -1224,48 +1257,235 @@
         </div>
       </section>
       <!-- Overview Section -->
-      <section id="overview" style="background: linear-gradient(135deg, #e9e7de 0%, #fdea9f 50%, #e0e7ff 100%); padding: 4rem 2rem;">
-        <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">About Fest Yuva Nirman</h2>
-        <div class="section-container" style="background: white; padding: 3rem; border-radius: 1.5rem; border: 3px solid #f97316; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);">
-          <p class="section-text" style="text-align: center; max-width: 900px; margin: 0 auto 3rem auto; font-size: 1.1rem; line-height: 1.8;">
-            <strong style="display: block; font-size: 1.3rem; color: #f97316; margin-bottom: 1rem;">Celebrate with Purpose. Create with Impact.</strong>
-            For over 20 years, Manashakti Research Centre has welcomed the New Year through a unique tradition — <strong>Constructive 31 December</strong>, a celebration that blends joy with meaningful contribution.<br><br>
-            Join us this year for <strong style="color: #8b5cf6;">Fest Yuva Nirman</strong>, where creativity, community, and social good come together.
+      <section
+        id="overview"
+        style="
+          background: linear-gradient(
+            135deg,
+            #e9e7de 0%,
+            #fdea9f 50%,
+            #e0e7ff 100%
+          );
+          padding: 4rem 2rem;
+        "
+      >
+        <h2
+          class="section-title"
+          style="text-align: center; margin-bottom: 2rem"
+        >
+          About Fest Yuva Nirman
+        </h2>
+        <div
+          class="section-container"
+          style="
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            border: 3px solid #f97316;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <p
+            class="section-text"
+            style="
+              text-align: center;
+              max-width: 900px;
+              margin: 0 auto 3rem auto;
+              font-size: 1.1rem;
+              line-height: 1.8;
+            "
+          >
+            <strong
+              style="
+                display: block;
+                font-size: 1.3rem;
+                color: #f97316;
+                margin-bottom: 1rem;
+              "
+              >Celebrate with Purpose. Create with Impact.</strong
+            >
+            For over 20 years, Manashakti Research Centre has welcomed the New
+            Year through a unique tradition —
+            <strong>Constructive 31 December</strong>, a celebration that blends
+            joy with meaningful contribution.<br /><br />
+            Join us this year for
+            <strong style="color: #8b5cf6">Fest Yuva Nirman</strong>, where
+            creativity, community, and social good come together.
           </p>
-          
-          <div class="about-split-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+
+          <div
+            class="about-split-layout"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 3rem;
+              margin-top: 2rem;
+            "
+          >
             <!-- Left Side: Why Join -->
-            <div class="about-card" style="padding: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #f97316; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);">
-              <h3 style="font-size: 1.8rem; color: #f97316; margin-bottom: 1.5rem; font-family: 'Nohemi', sans-serif;">Why Join?</h3>
-              <p style="margin-bottom: 1.5rem; color: #1e293b; line-height: 1.8;">Start 2026 with purpose. Fest Yuva Nirman lets you:</p>
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #1e293b; line-height: 1.6;">
-                  <span style="position: absolute; left: 0; color: #f97316; font-weight: bold;">•</span>
-                  <strong>Showcase Your Talent</strong> across art, tech, and performance.
+            <div
+              class="about-card"
+              style="
+                padding: 2rem;
+                background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+                border-radius: 1rem;
+                border: 2px solid #f97316;
+                box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+              "
+            >
+              <h3
+                style="
+                  font-size: 1.8rem;
+                  color: #f97316;
+                  margin-bottom: 1.5rem;
+                  font-family: 'Nohemi', sans-serif;
+                "
+              >
+                Why Join?
+              </h3>
+              <p
+                style="margin-bottom: 1.5rem; color: #1e293b; line-height: 1.8"
+              >
+                Start 2026 with purpose. Fest Yuva Nirman lets you:
+              </p>
+              <ul style="list-style: none; padding: 0; margin: 0">
+                <li
+                  style="
+                    margin-bottom: 1rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    color: #1e293b;
+                    line-height: 1.6;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      color: #f97316;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Showcase Your Talent</strong> across art, tech, and
+                  performance.
                 </li>
-                <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #1e293b; line-height: 1.6;">
-                  <span style="position: absolute; left: 0; color: #f97316; font-weight: bold;">•</span>
-                  <strong>Connect with Driven Youth</strong> and create something meaningful.
+                <li
+                  style="
+                    margin-bottom: 1rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    color: #1e293b;
+                    line-height: 1.6;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      color: #f97316;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Connect with Driven Youth</strong> and create
+                  something meaningful.
                 </li>
-                <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #1e293b; line-height: 1.6;">
-                  <span style="position: absolute; left: 0; color: #f97316; font-weight: bold;">•</span>
-                  <strong>Support a Cause</strong> that contributes to social upliftment.
+                <li
+                  style="
+                    margin-bottom: 1rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    color: #1e293b;
+                    line-height: 1.6;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      color: #f97316;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Support a Cause</strong> that contributes to social
+                  upliftment.
                 </li>
               </ul>
             </div>
-            
+
             <!-- Right Side: Unlimited Participation -->
-            <div class="about-card" style="padding: 2rem; background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%); border-radius: 1rem; border: 2px solid #8b5cf6; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);">
-              <h3 style="font-size: 1.8rem; color: #8b5cf6; margin-bottom: 1.5rem; font-family: 'Nohemi', sans-serif;">Unlimited Participation</h3>
-              <p style="margin-bottom: 1.5rem; color: #1e293b; line-height: 1.8;">Explore as many competitions as you like — individually or with your team. No limits, just creativity.</p>
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #1e293b; line-height: 1.6;">
-                  <span style="position: absolute; left: 0; color: #8b5cf6; font-weight: bold;">•</span>
-                  <strong>Access Full Event Experience</strong> — the ₹500 registration includes dormitory stay on 31st December, meals, and entry to all shows.
+            <div
+              class="about-card"
+              style="
+                padding: 2rem;
+                background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%);
+                border-radius: 1rem;
+                border: 2px solid #8b5cf6;
+                box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+              "
+            >
+              <h3
+                style="
+                  font-size: 1.8rem;
+                  color: #8b5cf6;
+                  margin-bottom: 1.5rem;
+                  font-family: 'Nohemi', sans-serif;
+                "
+              >
+                Unlimited Participation
+              </h3>
+              <p
+                style="margin-bottom: 1.5rem; color: #1e293b; line-height: 1.8"
+              >
+                Explore as many competitions as you like — individually or with
+                your team. No limits, just creativity.
+              </p>
+              <ul style="list-style: none; padding: 0; margin: 0">
+                <li
+                  style="
+                    margin-bottom: 1rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    color: #1e293b;
+                    line-height: 1.6;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      color: #8b5cf6;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Access Full Event Experience</strong> — the ₹500
+                  registration includes dormitory stay on 31st December, meals,
+                  and entry to all shows.
                 </li>
-                <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #1e293b; line-height: 1.6;">
-                  <span style="position: absolute; left: 0; color: #8b5cf6; font-weight: bold;">•</span>
-                  <strong>For Visitors:</strong> You are welcome to enjoy the event, explore the campus, and attend the shows even without participating in competitions.
+                <li
+                  style="
+                    margin-bottom: 1rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    color: #1e293b;
+                    line-height: 1.6;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      color: #8b5cf6;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>For Visitors:</strong> You are welcome to enjoy the
+                  event, explore the campus, and attend the shows even without
+                  participating in competitions.
                 </li>
               </ul>
             </div>
@@ -1275,17 +1495,32 @@
       <!-- Problem Statements Section -->
       <section id="problems">
         <div class="problems-container">
-          <h2 class="section-title" style="text-align: center;">Events</h2>
-          <p class="section-text" style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+          <h2 class="section-title" style="text-align: center">Events</h2>
+          <p
+            class="section-text"
+            style="
+              text-align: center;
+              max-width: 800px;
+              margin: 0 auto 2rem auto;
+            "
+          >
             Participants can register for multiple events as Individual or team.
           </p>
           <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="art">Express in Art</button>
-            <button class="filter-btn" data-filter="influencer">Influencer in You</button>
-            <button class="filter-btn" data-filter="hackathon">Hackathon</button>
-            <button class="filter-btn" data-filter="beats">Moves on Beats</button>
-            <button class="filter-btn" data-filter="expert">Expert's Experience</button>
+            <button class="filter-btn" data-filter="influencer">
+              Influencer in You
+            </button>
+            <button class="filter-btn" data-filter="hackathon">
+              Hackathon
+            </button>
+            <button class="filter-btn" data-filter="beats">
+              Moves on Beats
+            </button>
+            <button class="filter-btn" data-filter="expert">
+              Expert's Experience
+            </button>
           </div>
           <div class="problem-cards" id="problemCards"></div>
         </div>
@@ -1294,34 +1529,80 @@
       <!-- General Guidelines Section -->
       <section id="guidelines">
         <div class="guidelines-section">
-          <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">General Guidelines</h2>
+          <h2
+            class="section-title"
+            style="text-align: center; margin-bottom: 3rem"
+          >
+            General Guidelines
+          </h2>
           <div class="guidelines-box">
             <h2 class="guidelines-title">General Conduct & Ethics</h2>
             <ul class="guidelines-list">
-              <li><strong>Respectful Behaviour:</strong> Maintain respect toward all students, staff, guests, and crew. No bullying, harassment, mocking, or abusive language.</li>
-              <li><strong>Professionalism:</strong> Be punctual for all events. Follow event heads' instructions without argument.</li>
-              <li><strong>Cleanliness:</strong> Maintain cleanliness at all venues. Use dustbins. Damaging property will lead to penalties.</li>
-              <li><strong>ID Requirement:</strong> Event volunteers and participants must wear ID badges visibly.</li>
-              <li><strong>No Alcohol/Drugs:</strong> Strictly prohibited inside premises. Immediate removal if found.</li>
-              <li><strong>No Weapons/Dangerous Objects:</strong> Any harmful item will result in disciplinary action and immediate removal.</li>
+              <li>
+                <strong>Respectful Behaviour:</strong> Maintain respect toward
+                all students, staff, guests, and crew. No bullying, harassment,
+                mocking, or abusive language.
+              </li>
+              <li>
+                <strong>Professionalism:</strong> Be punctual for all events.
+                Follow event heads' instructions without argument.
+              </li>
+              <li>
+                <strong>Cleanliness:</strong> Maintain cleanliness at all
+                venues. Use dustbins. Damaging property will lead to penalties.
+              </li>
+              <li>
+                <strong>ID Requirement:</strong> Event volunteers and
+                participants must wear ID badges visibly.
+              </li>
+              <li>
+                <strong>No Alcohol/Drugs:</strong> Strictly prohibited inside
+                premises. Immediate removal if found.
+              </li>
+              <li>
+                <strong>No Weapons/Dangerous Objects:</strong> Any harmful item
+                will result in disciplinary action and immediate removal.
+              </li>
             </ul>
 
-            <h2 class="guidelines-title" style="margin-top: 2rem;">Opposite Gender Interaction & Premise Rules</h2>
+            <h2 class="guidelines-title" style="margin-top: 2rem">
+              Opposite Gender Interaction & Premise Rules
+            </h2>
             <ul class="guidelines-list">
-              <li><strong>Restricted Areas:</strong> No student is allowed in hostel areas of the opposite gender, backstage dressing rooms, or any private prep rooms unless officially assigned. Entry is only allowed with permission from event heads.</li>
-              <li><strong>Physical Conduct:</strong> Maintain appropriate physical boundaries. No intimate behaviour or inappropriate touching.</li>
-              <li><strong>Recording Consent:</strong> Taking photos/videos of anyone without consent is forbidden, especially in backstage, makeup, green room, or preparation areas.</li>
-              <li><strong>Zero Tolerance Harassment Policy:</strong> Any harassment complaint (verbal, visual, physical, digital) leads to immediate removal from the event and disciplinary actions.</li>
+              <li>
+                <strong>Restricted Areas:</strong> No student is allowed in
+                hostel areas of the opposite gender, backstage dressing rooms,
+                or any private prep rooms unless officially assigned. Entry is
+                only allowed with permission from event heads.
+              </li>
+              <li>
+                <strong>Physical Conduct:</strong> Maintain appropriate physical
+                boundaries. No intimate behaviour or inappropriate touching.
+              </li>
+              <li>
+                <strong>Recording Consent:</strong> Taking photos/videos of
+                anyone without consent is forbidden, especially in backstage,
+                makeup, green room, or preparation areas.
+              </li>
+              <li>
+                <strong>Zero Tolerance Harassment Policy:</strong> Any
+                harassment complaint (verbal, visual, physical, digital) leads
+                to immediate removal from the event and disciplinary actions.
+              </li>
             </ul>
 
-            <h2 class="guidelines-title" style="margin-top: 2rem;">Safety & Security</h2>
+            <h2 class="guidelines-title" style="margin-top: 2rem">
+              Safety & Security
+            </h2>
             <ul class="guidelines-list">
               <li>Emergency exits must be kept clear.</li>
               <li>In case of fire/alarm, follow volunteer instructions.</li>
               <li>Any medical emergency must be reported instantly.</li>
             </ul>
 
-            <h2 class="guidelines-title" style="margin-top: 2rem;">Disqualification Rules</h2>
+            <h2 class="guidelines-title" style="margin-top: 2rem">
+              Disqualification Rules
+            </h2>
             <ul class="guidelines-list">
               <li>Breaking event rules</li>
               <li>Misbehaving with opposite gender</li>
@@ -1330,143 +1611,318 @@
               <li>Disruptive or abusive behavior</li>
             </ul>
 
-            <h2 class="guidelines-title" style="margin-top: 2rem;">Consent & Liability</h2>
+            <h2 class="guidelines-title" style="margin-top: 2rem">
+              Consent & Liability
+            </h2>
             <ul class="guidelines-list">
-              <li>Participants agree that the event may record photos/videos publicly.</li>
-              <li>The organizing team is not responsible for lost personal belongings.</li>
-              <li>Participants must sign the rule acknowledgment form at registration.</li>
+              <li>
+                Participants agree that the event may record photos/videos
+                publicly.
+              </li>
+              <li>
+                The organizing team is not responsible for lost personal
+                belongings.
+              </li>
+              <li>
+                Participants must sign the rule acknowledgment form at
+                registration.
+              </li>
             </ul>
 
-            <p style="margin-top: 1.5rem; font-weight: 700; color: #8b5cf6; text-align: center;">Note: Organizers reserve all rights to make changes. Decisions by organizers are final.</p>
+            <p
+              style="
+                margin-top: 1.5rem;
+                font-weight: 700;
+                color: #8b5cf6;
+                text-align: center;
+              "
+            >
+              Note: Organizers reserve all rights to make changes. Decisions by
+              organizers are final.
+            </p>
           </div>
 
           <div class="agree-checkbox-container">
             <label class="agree-checkbox-label">
-              <input type="checkbox" id="agreeCheckbox">
-              <span>I agree to the terms and conditions and general guidelines</span>
+              <input type="checkbox" id="agreeCheckbox" />
+              <span
+                >I agree to the terms and conditions and general
+                guidelines</span
+              >
             </label>
           </div>
 
-          <div id="formPlaceholder" style="display: block; text-align: center; padding: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border: 2px dashed #8b5cf6; border-radius: 1rem; margin-top: 2rem;">
-            <p style="font-size: 1.2rem; color: #8b5cf6; font-weight: 600; margin: 0;">
-              📋 Google Form will appear here once you agree to terms and conditions
+          <div
+            id="formPlaceholder"
+            style="
+              display: block;
+              text-align: center;
+              padding: 2rem;
+              background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+              border: 2px dashed #8b5cf6;
+              border-radius: 1rem;
+              margin-top: 2rem;
+            "
+          >
+            <p
+              style="
+                font-size: 1.2rem;
+                color: #8b5cf6;
+                font-weight: 600;
+                margin: 0;
+              "
+            >
+              📋 Google Form will appear here once you agree to terms and
+              conditions
             </p>
           </div>
 
           <div class="form-iframe-container" id="formContainer">
-            <iframe 
+            <iframe
               id="googleFormIframe"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?embedded=true" 
-              frameborder="0" 
-              marginheight="0" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?embedded=true"
+              frameborder="0"
+              marginheight="0"
               marginwidth="0"
               onload="hideFormFallback()"
-              onerror="showFormFallback()">
+              onerror="showFormFallback()"
+            >
               Loading…
             </iframe>
-            
+
             <!-- QR Code & Direct Link - Always Visible -->
-            <div style="text-align: center; padding: 2rem; margin-top: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
-              <h3 style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.3rem;">📱 Alternative Access Methods</h3>
-              <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 3rem;">
+            <div
+              style="
+                text-align: center;
+                padding: 2rem;
+                margin-top: 2rem;
+                background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+                border-radius: 1rem;
+                border: 2px solid #8b5cf6;
+              "
+            >
+              <h3
+                style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.3rem"
+              >
+                📱 Alternative Access Methods
+              </h3>
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  align-items: flex-start;
+                  gap: 3rem;
+                "
+              >
                 <!-- QR Code Section -->
                 <div>
-                  <h4 style="color: #1e293b; margin-bottom: 1rem; font-size: 1.1rem;">Scan QR Code</h4>
-                  <img 
-                    src="assets/qr-code.jpg" 
-                    alt="Registration Form QR Code" 
-                    style="max-width: 200px; border: 3px solid #8b5cf6; border-radius: 0.5rem; padding: 0.5rem; background: white;"
+                  <h4
+                    style="
+                      color: #1e293b;
+                      margin-bottom: 1rem;
+                      font-size: 1.1rem;
+                    "
+                  >
+                    Scan QR Code
+                  </h4>
+                  <img
+                    src="assets/qr-code.jpg"
+                    alt="Registration Form QR Code"
+                    style="
+                      max-width: 200px;
+                      border: 3px solid #8b5cf6;
+                      border-radius: 0.5rem;
+                      padding: 0.5rem;
+                      background: white;
+                    "
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
                   />
-                  <p style="display: none; color: #ef4444; font-style: italic; font-size: 0.9rem;">QR Code not available</p>
+                  <p
+                    style="
+                      display: none;
+                      color: #ef4444;
+                      font-style: italic;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    QR Code not available
+                  </p>
                 </div>
-                
+
                 <!-- Direct Link Section -->
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                  <h4 style="color: #1e293b; margin-bottom: 1rem; font-size: 1.1rem;">Or Open Form Directly</h4>
-                  <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?usp=send_form" 
-                    target="_blank" 
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <h4
+                    style="
+                      color: #1e293b;
+                      margin-bottom: 1rem;
+                      font-size: 1.1rem;
+                    "
+                  >
+                    Or Open Form Directly
+                  </h4>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?usp=send_form"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    style="display: inline-block; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; padding: 0.8rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 700; font-size: 1rem; transition: transform 0.3s ease; box-shadow: 4px 4px 0px #1e293b;"
+                    style="
+                      display: inline-block;
+                      background: linear-gradient(
+                        135deg,
+                        #8b5cf6 0%,
+                        #ec4899 100%
+                      );
+                      color: white;
+                      padding: 0.8rem 1.5rem;
+                      border-radius: 2rem;
+                      text-decoration: none;
+                      font-weight: 700;
+                      font-size: 1rem;
+                      transition: transform 0.3s ease;
+                      box-shadow: 4px 4px 0px #1e293b;
+                    "
                     onmouseover="this.style.transform='scale(1.05)'"
-                    onmouseout="this.style.transform='scale(1)'">
+                    onmouseout="this.style.transform='scale(1)'"
+                  >
                     🔗 Open Form in New Tab
                   </a>
                 </div>
               </div>
             </div>
-            
+
             <!-- Fallback Option: QR Code & Direct Link -->
-            <div id="formFallback" style="display: none; text-align: center; padding: 2rem; background: white; border-radius: 0.5rem;">
-              <h3 style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.5rem;">Alternative Registration Options</h3>
-              <p style="color: #1e293b; margin-bottom: 2rem;">If the form above doesn't load, please use one of these options:</p>
-              
+            <div
+              id="formFallback"
+              style="
+                display: none;
+                text-align: center;
+                padding: 2rem;
+                background: white;
+                border-radius: 0.5rem;
+              "
+            >
+              <h3
+                style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.5rem"
+              >
+                Alternative Registration Options
+              </h3>
+              <p style="color: #1e293b; margin-bottom: 2rem">
+                If the form above doesn't load, please use one of these options:
+              </p>
+
               <!-- QR Code Section -->
-              <div style="margin-bottom: 2rem;">
-                <h4 style="color: #1e293b; margin-bottom: 1rem;">Scan QR Code</h4>
-                <img 
-                  id="qrCodeImage" 
-                  src="assets/qr-code.jpg" 
-                  alt="Registration Form QR Code" 
-                  style="max-width: 250px; border: 3px solid #8b5cf6; border-radius: 0.5rem; padding: 1rem; background: white;"
+              <div style="margin-bottom: 2rem">
+                <h4 style="color: #1e293b; margin-bottom: 1rem">
+                  Scan QR Code
+                </h4>
+                <img
+                  id="qrCodeImage"
+                  src="assets/qr-code.jpg"
+                  alt="Registration Form QR Code"
+                  style="
+                    max-width: 250px;
+                    border: 3px solid #8b5cf6;
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    background: white;
+                  "
                   onerror="this.style.display='none'; document.getElementById('qrCodeError').style.display='block';"
                 />
-                <p id="qrCodeError" style="display: none; color: #ef4444; font-style: italic;">QR Code image not available</p>
+                <p
+                  id="qrCodeError"
+                  style="display: none; color: #ef4444; font-style: italic"
+                >
+                  QR Code image not available
+                </p>
               </div>
-              
+
               <!-- Direct Link Section -->
               <div>
-                <h4 style="color: #1e293b; margin-bottom: 1rem;">Or Click the Link Below</h4>
-                <a 
-                  id="directFormLink" 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?usp=send_form" 
-                  target="_blank" 
+                <h4 style="color: #1e293b; margin-bottom: 1rem">
+                  Or Click the Link Below
+                </h4>
+                <a
+                  id="directFormLink"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfN4jb_n-Czywqj6nP2PFG46GKVL4tDQi3wjxbIQjN42twlaQ/viewform?usp=send_form"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  style="display: inline-block; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s ease; box-shadow: 4px 4px 0px #1e293b;"
+                  style="
+                    display: inline-block;
+                    background: linear-gradient(
+                      135deg,
+                      #8b5cf6 0%,
+                      #ec4899 100%
+                    );
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 2rem;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    transition: transform 0.3s ease;
+                    box-shadow: 4px 4px 0px #1e293b;
+                  "
                   onmouseover="this.style.transform='scale(1.05)'"
-                  onmouseout="this.style.transform='scale(1)'">
+                  onmouseout="this.style.transform='scale(1)'"
+                >
                   🔗 Open Registration Form in New Tab
                 </a>
-                <p style="margin-top: 1rem; color: #64748b; font-size: 0.9rem;">The form will open in a new browser tab</p>
+                <p style="margin-top: 1rem; color: #64748b; font-size: 0.9rem">
+                  The form will open in a new browser tab
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       <script>
         // Function to show fallback if iframe fails to load
         function showFormFallback() {
-          const fallback = document.getElementById('formFallback');
+          const fallback = document.getElementById("formFallback");
           if (fallback) {
-            fallback.style.display = 'block';
+            fallback.style.display = "block";
           }
         }
-        
+
         // Function to hide fallback if iframe loads successfully
         function hideFormFallback() {
-          const fallback = document.getElementById('formFallback');
+          const fallback = document.getElementById("formFallback");
           if (fallback) {
-            fallback.style.display = 'none';
+            fallback.style.display = "none";
           }
         }
-        
+
         // Check if iframe is loaded after 5 seconds timeout
-        setTimeout(function() {
-          const iframe = document.getElementById('googleFormIframe');
-          const formContainer = document.getElementById('formContainer');
-          
-          if (iframe && formContainer && formContainer.classList.contains('show')) {
+        setTimeout(function () {
+          const iframe = document.getElementById("googleFormIframe");
+          const formContainer = document.getElementById("formContainer");
+
+          if (
+            iframe &&
+            formContainer &&
+            formContainer.classList.contains("show")
+          ) {
             try {
               // Try to access iframe content (will fail for cross-origin)
-              const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-              if (!iframeDoc || iframeDoc.readyState !== 'complete') {
+              const iframeDoc =
+                iframe.contentDocument || iframe.contentWindow.document;
+              if (!iframeDoc || iframeDoc.readyState !== "complete") {
                 showFormFallback();
               }
             } catch (e) {
               // Cross-origin restriction - assume it's loaded if no error in src
-              if (iframe.src.includes('INVALID_FORM_ID') || iframe.src.includes('YOUR_FORM_ID')) {
+              if (
+                iframe.src.includes("INVALID_FORM_ID") ||
+                iframe.src.includes("YOUR_FORM_ID")
+              ) {
                 // Placeholder URL still present, show fallback
                 showFormFallback();
               }
@@ -1478,7 +1934,9 @@
       <!-- FAQ Section -->
       <section id="faq">
         <div class="faq-container">
-          <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+          <h2 class="section-title" style="text-align: center">
+            Frequently Asked Questions
+          </h2>
           <div id="faqContainer"></div>
         </div>
       </section>
@@ -1488,16 +1946,6 @@
           <div class="footer-grid">
             <div class="footer-section">
               <h3>Contact Us</h3>
-              <div class="footer-item">
-                <svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path></svg
-                ><span>contact@festyuvanirman.com</span>
-              </div>
               <div class="footer-item">
                 <svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
                   <path
@@ -1564,8 +2012,22 @@
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   ></path>
                 </svg>
-                <a href="https://www.google.com/maps/place/Manashakti+Research+Centre+(Activities+for+Mind+Power),+Manashakti+REST+New+Way,+Mumbai+-+Pune+Road+Village+Varsoli+Opp+MSEB+Sub-station+Varsoli,+Taluka,+Maval,+Lonavala,+Maharashtra+410401/@18.7589626,73.4329179,16z/data=!4m6!3m5!1s0x3be801b0f5b96829:0x7c2597b76084838a!8m2!3d18.758287!4d73.4333226!16s%2Fg%2F1tj31lfs?utm_campaign=ml-ardi&g_ep=Eg1tbF8yMDI1MTIwOF8wIOC7DCoASAJQAQ%3D%3D" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='inherit'">
-                  <span>Manashanti Centre, Old Mumbai-Pune Road, Near Varsoli Toll Plaza, Lonavala - 410401</span>
+                <a
+                  href="https://www.google.com/maps/place/Manashakti+Research+Centre+(Activities+for+Mind+Power),+Manashakti+REST+New+Way,+Mumbai+-+Pune+Road+Village+Varsoli+Opp+MSEB+Sub-station+Varsoli,+Taluka,+Maval,+Lonavala,+Maharashtra+410401/@18.7589626,73.4329179,16z/data=!4m6!3m5!1s0x3be801b0f5b96829:0x7c2597b76084838a!8m2!3d18.758287!4d73.4333226!16s%2Fg%2F1tj31lfs?utm_campaign=ml-ardi&g_ep=Eg1tbF8yMDI1MTIwOF8wIOC7DCoASAJQAQ%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="
+                    color: inherit;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                  "
+                  onmouseover="this.style.color='#f97316'"
+                  onmouseout="this.style.color='inherit'"
+                >
+                  <span
+                    >Manashanti Centre, Old Mumbai-Pune Road, Near Varsoli Toll
+                    Plaza, Lonavala - 410401</span
+                  >
                 </a>
               </div>
             </div>
@@ -1573,7 +2035,25 @@
           <div class="footer-bottom">
             <p>© 2025 Fest Yuva Nirman. All rights reserved.</p>
             <p class="footer-tagline">
-              ✨ Crafted with passion by <a href="http://Mkitos.codeberg.page" style="color: #8b5cf6; font-weight: 700; text-decoration: none; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; transition: all 0.3s ease; border-bottom: 2px solid #8b5cf6; padding-bottom: 2px;" onmouseover="this.style.borderBottomColor='#ec4899'; this.style.transform='scale(1.05)'" onmouseout="this.style.borderBottomColor='#8b5cf6'; this.style.transform='scale(1)'">.MKITOS</a> 
+              ✨ Crafted with passion by
+              <a
+                href="http://Mkitos.codeberg.page"
+                style="
+                  color: #8b5cf6;
+                  font-weight: 700;
+                  text-decoration: none;
+                  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  transition: all 0.3s ease;
+                  border-bottom: 2px solid #8b5cf6;
+                  padding-bottom: 2px;
+                "
+                onmouseover="this.style.borderBottomColor='#ec4899'; this.style.transform='scale(1.05)'"
+                onmouseout="this.style.borderBottomColor='#8b5cf6'; this.style.transform='scale(1)'"
+                >.MKITOS</a
+              >
               Building the future, one line of code at a time 🚀
             </p>
           </div>
@@ -1593,31 +2073,37 @@
           id: 1,
           category: "art",
           participationType: "Solo/Team",
-          title: 'Express in Art',
-          description: "Drawing & Painting - Topic: Joy of giving, Sculpture & Clay Work - Topic: Joy of giving, Rangoli - Topic: Gratitude",
+          title: "Express in Art",
+          description:
+            "Drawing & Painting - Topic: Joy of giving, Sculpture & Clay Work - Topic: Joy of giving, Rangoli - Topic: Gratitude",
           difficulty: "Medium",
           details: {
-            statement: "Express your creativity through various art forms celebrating joy of giving and gratitude.",
+            statement:
+              "Express your creativity through various art forms celebrating joy of giving and gratitude.",
             topics: [
               {
                 title: "Drawing & Painting - Joy of giving",
-                description: "Create artwork through drawing and painting celebrating the theme of joy of giving"
+                description:
+                  "Create artwork through drawing and painting celebrating the theme of joy of giving",
               },
               {
                 title: "Sculpture & Clay Work - Joy of giving",
-                description: "Create sculptures using clay work celebrating the theme of joy of giving"
+                description:
+                  "Create sculptures using clay work celebrating the theme of joy of giving",
               },
               {
                 title: "Rangoli - Gratitude",
-                description: "Create traditional Rangoli designs celebrating the theme of gratitude"
-              }
+                description:
+                  "Create traditional Rangoli designs celebrating the theme of gratitude",
+              },
             ],
             keyIssues: [
               "Drawing & Painting on Joy of giving",
               "Sculpture & Clay Work on Joy of giving",
-              "Rangoli on Gratitude theme"
+              "Rangoli on Gratitude theme",
             ],
-            expectedSolution: "Creative artwork submissions in respective categories",
+            expectedSolution:
+              "Creative artwork submissions in respective categories",
             guidelines: [
               "Your artwork must reflect the theme clearly",
               "Cartridge drawing sheet will be provided by the organizers",
@@ -1626,28 +2112,32 @@
               "The time limit must be respected",
               "No plagiarism; must be original artwork",
               "Sculpture: Base and clay will be provided by the organizers. Tools to be carried by the participants",
-              "Rangoli: Rangoli and colours will be provided. Pre-made stencils are not allowed"
-            ]
+              "Rangoli: Rangoli and colours will be provided. Pre-made stencils are not allowed",
+            ],
           },
         },
         {
           id: 2,
           category: "influencer",
           participationType: "Solo/Team",
-          title: 'Influencer in You',
-          description: "Reel Making Competition - Create inspiring 20-60 second reels on 'Make Someone Smile' or 'A Day at Manashakti'",
+          title: "Influencer in You",
+          description:
+            "Reel Making Competition - Create inspiring 20-60 second reels on 'Make Someone Smile' or 'A Day at Manashakti'",
           difficulty: "Medium",
           details: {
-            statement: "Create engaging reels that inspire, spread positivity, and showcase creativity through short-form video content.",
+            statement:
+              "Create engaging reels that inspire, spread positivity, and showcase creativity through short-form video content.",
             topics: [
               {
                 title: "Make Someone Smile",
-                description: "Create a 20-60 second reel that brings joy and happiness to viewers"
+                description:
+                  "Create a 20-60 second reel that brings joy and happiness to viewers",
               },
               {
                 title: "A Day at Manashakti",
-                description: "Create a 20-60 second reel reflecting positivity, learning, or inspiring moments at Manashakti"
-              }
+                description:
+                  "Create a 20-60 second reel reflecting positivity, learning, or inspiring moments at Manashakti",
+              },
             ],
             keyIssues: [
               "Topic A: Make Someone Smile - Create content that brings joy and happiness",
@@ -1655,9 +2145,10 @@
               "Duration: 20 to 60 seconds only",
               "Vertical video format (9:16) with clear quality",
               "Use acting, animation, voice-over, music, etc.",
-              "Judged on creativity, originality, emotional impact, message clarity, and execution"
+              "Judged on creativity, originality, emotional impact, message clarity, and execution",
             ],
-            expectedSolution: "Vertical video reel (9:16 format) submitted with name, age, and contact details",
+            expectedSolution:
+              "Vertical video reel (9:16 format) submitted with name, age, and contact details",
             guidelines: [
               "Duration: 20 to 60 seconds only",
               "Content Restrictions: No offensive content about religion, caste, community, or individuals",
@@ -1671,23 +2162,25 @@
               "Final submission date will be announced by organizers",
               "Judging Criteria: Creativity, originality, emotional impact, message clarity, and overall execution",
               "Organizers may display reels on social media or event screens",
-              "Top 3 Final Reels will be showcased and awarded"
-            ]
+              "Top 3 Final Reels will be showcased and awarded",
+            ],
           },
         },
         {
           id: 3,
           category: "hackathon",
           participationType: "Solo/Team",
-          title: 'Hackathon',
+          title: "Hackathon",
           description: "Choose from 7 challenging problem statements to solve",
           difficulty: "Hard",
           details: {
-            statement: "Manashakti Hackathon presents 7 unique problem statements across UI/UX, AI, and digital transformation. Choose one problem statement and create innovative solutions.",
+            statement:
+              "Manashakti Hackathon presents 7 unique problem statements across UI/UX, AI, and digital transformation. Choose one problem statement and create innovative solutions.",
             problemStatements: [
               {
                 title: "1. Website UI/UX - The 'Clutter' Problem",
-                statement: "The current www.manashakti.org website visitors suffer from confusion during booking, information overload and structural complexity. Users, especially on mobile devices, cannot find key resources, driving users away.",
+                statement:
+                  "The current www.manashakti.org website visitors suffer from confusion during booking, information overload and structural complexity. Users, especially on mobile devices, cannot find key resources, driving users away.",
                 keyIssues: [
                   "1. Content discoverability issues (events, books, courses, experiments)",
                   "2. Complex navigation structure leading to difficulty in finding required things",
@@ -1697,13 +2190,15 @@
                   "6. Limited accessibility features for people with disabilities",
                   "7. Search functionality not optimized for keywords, interests, or user intent",
                   "8. Missing engagement tools such as chatbots",
-                  "9. Booking Complexity: Multi-step workflows create friction and user drop-offs"
+                  "9. Booking Complexity: Multi-step workflows create friction and user drop-offs",
                 ],
-                expectedSolution: "Wireframes / Live prototype (MVP) / Working model (Completed Solution)"
+                expectedSolution:
+                  "Wireframes / Live prototype (MVP) / Working model (Completed Solution)",
               },
               {
                 title: "2. Manatarang App UI/UX - The 'Ease' Problem",
-                statement: "The Manatarang app delivers guided meditation, wellness content and animated Sanskar Stories for Kids. However, feedback and analytics indicate that users face several challenges, resulting in lower engagement and low conversion from free to paid features.",
+                statement:
+                  "The Manatarang app delivers guided meditation, wellness content and animated Sanskar Stories for Kids. However, feedback and analytics indicate that users face several challenges, resulting in lower engagement and low conversion from free to paid features.",
                 keyIssues: [
                   "1. User Onboarding & Navigation",
                   "• Users find initial onboarding unclear, leading to drop-offs during sign-up.",
@@ -1723,13 +2218,15 @@
                   "5. UI & Visual Identity Enhancement",
                   "• Inconsistent Visual Identity: The layout lacks a modern, youth-friendly aesthetic, often feeling cluttered rather than calming.",
                   "• Overwhelming Interface: A cluttered layout makes the app feel less calming, detracting from the core meditation experience.",
-                  "• Dated Aesthetics: The visual design does not reflect a 'premium' feel, impacting user trust and the perceived value of paid subscriptions."
+                  "• Dated Aesthetics: The visual design does not reflect a 'premium' feel, impacting user trust and the perceived value of paid subscriptions.",
                 ],
-                expectedSolution: "Wireframes / Live prototype (MVP) / Working model (Completed Solution)"
+                expectedSolution:
+                  "Wireframes / Live prototype (MVP) / Working model (Completed Solution)",
               },
               {
                 title: "3. Magazine Subscription - The 'Conversion' Problem",
-                statement: "Declining Subscription & Renewal Challenges of Manashakti Monthly Magazine. Manashakti's Monthly Magazine has been a trusted source of thought leadership, reflects combination of science and philosophy, research-based insights, and practical life solutions for more than 48 years. With over 35,000 active subscribers and more than 1,00,000 readers, it has a strong and loyal audience base across India and abroad. We also have a special Diwali Issue for kids, started from 2014. Colourful, attractive, full of stories, poems, jokes and special articles from renowned writers as well as kids themselves. However, in recent years, the magazine has been facing a decline in subscriber retention and irregular renewal patterns, impacting both readership continuity.",
+                statement:
+                  "Declining Subscription & Renewal Challenges of Manashakti Monthly Magazine. Manashakti's Monthly Magazine has been a trusted source of thought leadership, reflects combination of science and philosophy, research-based insights, and practical life solutions for more than 48 years. With over 35,000 active subscribers and more than 1,00,000 readers, it has a strong and loyal audience base across India and abroad. We also have a special Diwali Issue for kids, started from 2014. Colourful, attractive, full of stories, poems, jokes and special articles from renowned writers as well as kids themselves. However, in recent years, the magazine has been facing a decline in subscriber retention and irregular renewal patterns, impacting both readership continuity.",
                 keyIssues: [
                   "Discovery & Awareness Issues",
                   "For new users:",
@@ -1746,26 +2243,32 @@
                   "• Do not know how or where to renew digitally.",
                   "• Manual Tracking: The organisation currently lacks a real-time system to monitor magazine dispatch, leading to delivery delays or losses.",
                   "• Address Inaccuracy: Outdated or manual entry of addresses causes failed deliveries and increased shipping costs.",
-                  "• Zero Visibility: Subscribers have no way to track their magazine status, leading to frequent support inquiries."
+                  "• Zero Visibility: Subscribers have no way to track their magazine status, leading to frequent support inquiries.",
                 ],
-                expectedSolution: "Proposal presentation / Any Technological Solution - Wireframe / MVP / Completed Solution"
+                expectedSolution:
+                  "Proposal presentation / Any Technological Solution - Wireframe / MVP / Completed Solution",
               },
               {
-                title: "4. Manashakti Suggested Methods - The 'Impact Tracking' Problem",
-                statement: "Manashakti offers diverse solutions across age groups, yet lacks a centralized system to track user implementation and long-term progress. Without a digital logging mechanism, valuable impact data isn't documented, preventing the organization from visualizing success metrics and also preventing users from seeing their own growth.",
+                title:
+                  "4. Manashakti Suggested Methods - The 'Impact Tracking' Problem",
+                statement:
+                  "Manashakti offers diverse solutions across age groups, yet lacks a centralized system to track user implementation and long-term progress. Without a digital logging mechanism, valuable impact data isn't documented, preventing the organization from visualizing success metrics and also preventing users from seeing their own growth.",
                 keyIssues: [
                   "1. Digital Data Fragmentation: Valuable success metrics and long-term implementation results are currently manually recorded, preventing scalable data analysis.",
                   "2. Lack of Self-Monitoring and Feedback Loops: Without simple tools to log daily habits or see visual rewards, users find it hard to stay disciplined and cannot see how their efforts improve their well-being.",
                   "3. Absence of Admin Oversight: The organization needs real-time data to monitor which programs are most effective or which age groups are most active.",
                   "4. Information Silos: Results and success stories are not easily shareable between the user and the research centre, hindering the collection of research-grade data.",
                   "5. Disconnected User Experience: Users consume Manashakti's content but do not have a 'Personal Growth Hub' that consolidates their activities, test results, and implementation history.",
-                  "6. Privacy and Trust Barriers: Users are hesitant to log sensitive wellness data without explicit, high-standard digital privacy protocols and clear data-ownership policies."
+                  "6. Privacy and Trust Barriers: Users are hesitant to log sensitive wellness data without explicit, high-standard digital privacy protocols and clear data-ownership policies.",
                 ],
-                expectedSolution: "Expected Solutions:<br><br>• Web/Mobile/Wireframe Logging App: A lightweight, user-friendly interface for logging daily wellness tasks and 'Sanskar' implementation.<br><br>• Must have Admin Data Tracking Interface: A high-level visualization tool for the research centre to track geographic, demographic, and program/solution-wise impact.<br><br>• Reports: Capability to generate 'Growth Summary' for users to see their personal journey over months or years.<br><br><br>Below information/PDF/Docs contains details of all manashakti products and their using age group tier:<br><a href='https://docs.google.com/document/d/12rj4qR0jMkWrcXk8-8pgS99pvIthukdbgDv9DiKigiU/edit?usp=sharing' target='_blank' style='color: #f97316; background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px; border: 2px solid #f97316; transition: all 0.3s ease;'>📄 Click here to view Manashakti Products & Age Group Details</a>"
+                expectedSolution:
+                  "Expected Solutions:<br><br>• Web/Mobile/Wireframe Logging App: A lightweight, user-friendly interface for logging daily wellness tasks and 'Sanskar' implementation.<br><br>• Must have Admin Data Tracking Interface: A high-level visualization tool for the research centre to track geographic, demographic, and program/solution-wise impact.<br><br>• Reports: Capability to generate 'Growth Summary' for users to see their personal journey over months or years.<br><br><br>Below information/PDF/Docs contains details of all manashakti products and their using age group tier:<br><a href='https://docs.google.com/document/d/12rj4qR0jMkWrcXk8-8pgS99pvIthukdbgDv9DiKigiU/edit?usp=sharing' target='_blank' style='color: #f97316; background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px; border: 2px solid #f97316; transition: all 0.3s ease;'>📄 Click here to view Manashakti Products & Age Group Details</a>",
               },
               {
-                title: "5. Manashakti Wisdom - The 'Discovery' Problem (AI-Based Solution Required)",
-                statement: "Manashakti possesses a vast library of audio/text knowledge, but it is buried under poor categorization. Users cannot search by 'Mood,' 'Interest,' or 'Age Group,' making the wisdom inaccessible to modern youth. Manashakti has published 250+ books based on over 50 years of scientific research, blending science, philosophy, and spirituality. These books cover life from prenatal development to life after death, guiding people of all ages, genders, religions, regions, and languages towards: Personal development, Family and social harmony, National well-being, and Global well-being. This Manashakti wisdom has already helped lakhs of people worldwide bring powerful, positive changes in their lives. However, accessing the right wisdom at the right time is a major challenge today.",
+                title:
+                  "5. Manashakti Wisdom - The 'Discovery' Problem (AI-Based Solution Required)",
+                statement:
+                  "Manashakti possesses a vast library of audio/text knowledge, but it is buried under poor categorization. Users cannot search by 'Mood,' 'Interest,' or 'Age Group,' making the wisdom inaccessible to modern youth. Manashakti has published 250+ books based on over 50 years of scientific research, blending science, philosophy, and spirituality. These books cover life from prenatal development to life after death, guiding people of all ages, genders, religions, regions, and languages towards: Personal development, Family and social harmony, National well-being, and Global well-being. This Manashakti wisdom has already helped lakhs of people worldwide bring powerful, positive changes in their lives. However, accessing the right wisdom at the right time is a major challenge today.",
                 keyIssues: [
                   "Key Issue: Search bar is weak; content is hard to discover.",
                   "Goal: A Smart Search Engine that tags content (e.g., 'Wisdom for Anxiety').",
@@ -1775,13 +2278,16 @@
                   "Even if they know the book, they don't know which chapter is relevant.",
                   "They must: Go to the library at Manashakti main centre or sub-centre, or Search through the physical Manashakti books they own, Read the index, guess the right chapter, Then read multiple pages or chapters to find the exact solution.",
                   "This process is: Time-consuming, Overwhelming especially for new readers, Difficult for people who live far away or prefer digital/instant solutions.",
-                  "As a result, many people who need Manashakti's guidance right now cannot quickly connect to the exact wisdom meant for them."
+                  "As a result, many people who need Manashakti's guidance right now cannot quickly connect to the exact wisdom meant for them.",
                 ],
-                expectedSolution: "AI-Based Solution (Mandatory): Wireframes / Live prototype (MVP) / Working model. Must use NLP to understand questions in simple language, map to relevant books/chapters/paragraphs, and provide specific actionable guidance in English & Marathi"
+                expectedSolution:
+                  "AI-Based Solution (Mandatory): Wireframes / Live prototype (MVP) / Working model. Must use NLP to understand questions in simple language, map to relevant books/chapters/paragraphs, and provide specific actionable guidance in English & Marathi",
               },
               {
-                title: "6. Seeding Success - Plan for Self Excellence - The 'Retention' Problem",
-                statement: "The 'Self Excellence' methodology currently exists as theory but lacks a digital tool. Users have no way to track their daily progress, set goals, or visualize their habit-building journey digitally.",
+                title:
+                  "6. Seeding Success - Plan for Self Excellence - The 'Retention' Problem",
+                statement:
+                  "The 'Self Excellence' methodology currently exists as theory but lacks a digital tool. Users have no way to track their daily progress, set goals, or visualize their habit-building journey digitally.",
                 keyIssues: [
                   "No feedback loop to keep users motivated",
                   "No digital habit tracker available",
@@ -1789,23 +2295,26 @@
                   "No progress visualization or graphs",
                   "Users cannot see their improvement over time",
                   "Need digital tracking for daily progress",
-                  "Require visualization tools for habit-building journey"
+                  "Require visualization tools for habit-building journey",
                 ],
-                expectedSolution: "Digital Habit Tracker & Goal Setter module with progress graphs and visualization. Must include feedback loops, goal setting features, and visual progress indicators"
+                expectedSolution:
+                  "Digital Habit Tracker & Goal Setter module with progress graphs and visualization. Must include feedback loops, goal setting features, and visual progress indicators",
               },
               {
                 title: "7. AI FOR GOOD",
-                statement: "Technology should serve humanity, but elevate it. We challenge participants to leverage Artificial Intelligence to create empathetic, ethical, and high-impact solutions that directly improve mental well-being, streamline research data, and personalize the path to peace for every user.",
+                statement:
+                  "Technology should serve humanity, but elevate it. We challenge participants to leverage Artificial Intelligence to create empathetic, ethical, and high-impact solutions that directly improve mental well-being, streamline research data, and personalize the path to peace for every user.",
                 keyIssues: [
                   "Create AI solutions that serve and elevate humanity",
                   "Develop empathetic and ethical AI applications",
                   "Improve mental well-being through AI",
                   "Streamline research data using AI technology",
                   "Personalize the path to peace for users",
-                  "Build high-impact AI solutions for social good"
+                  "Build high-impact AI solutions for social good",
                 ],
-                expectedSolution: "AI-powered solution that demonstrates empathy, ethics, and measurable impact on mental well-being, research efficiency, or personalized user guidance"
-              }
+                expectedSolution:
+                  "AI-powered solution that demonstrates empathy, ethics, and measurable impact on mental well-being, research efficiency, or personalized user guidance",
+              },
             ],
             keyIssues: [
               "Choose ONE problem statement from the 7 options above",
@@ -1813,9 +2322,10 @@
               "STRICT GENDER POLICY: Teams must be All-Male or All-Female only",
               "Registration Deadline: 25 December 2025 11:59 PM",
               "Submission Deadline: 29 December 2025 6 PM IST",
-              "Event Date: 31 December 2025 at Manashanti Kendra, Lonavala"
+              "Event Date: 31 December 2025 at Manashanti Kendra, Lonavala",
             ],
-            expectedSolution: "Varies by problem statement - Wireframes, MVP, Working Model, or Proposal Presentation",
+            expectedSolution:
+              "Varies by problem statement - Wireframes, MVP, Working Model, or Proposal Presentation",
             guidelines: [
               "General Participation: Teams must be All-Male or All-Female (1-5 members, age 15-25)",
               "Bring valid Government ID and College/Company ID cards",
@@ -1829,15 +2339,15 @@
               "Plagiarism Penalty: Stealing code/designs leads to immediate disqualification",
               "IP Rights: Manashakti Research Centre retains rights to use submitted ideas",
               "Credit: Original creators will be credited if solution is implemented live",
-              "Registration includes: Entry, pure vegetarian satvik meals, dormitory accommodation"
-            ]
+              "Registration includes: Entry, pure vegetarian satvik meals, dormitory accommodation",
+            ],
           },
         },
         {
           id: 4,
           category: "beats",
           participationType: "Team",
-          title: 'Moves on Beats',
+          title: "Moves on Beats",
           description: "Dance Show - Topic: Indian Culture",
           difficulty: "Medium",
           details: {
@@ -1845,17 +2355,19 @@
             topics: [
               {
                 title: "Folk Dance - Indian Culture",
-                description: "Perform traditional folk dance showcasing Indian cultural heritage"
+                description:
+                  "Perform traditional folk dance showcasing Indian cultural heritage",
               },
               {
                 title: "Classical Dance - Indian Tradition",
-                description: "Perform classical or semi-classical dance celebrating Indian tradition"
-              }
+                description:
+                  "Perform classical or semi-classical dance celebrating Indian tradition",
+              },
             ],
             keyIssues: [
               "Celebrate Indian cultural heritage",
               "Express creativity through dance",
-              "Group or solo performances welcome"
+              "Group or solo performances welcome",
             ],
             expectedSolution: "Live dance performance",
             guidelines: [
@@ -1865,8 +2377,8 @@
               "The performance must be a Folk, Classical, or Semi-Classical dance showcasing Indian culture and tradition",
               "No vulgar or inappropriate movements; maintain cultural respect",
               "Performance duration: 5-8 minutes including entry and exit",
-              "Other details will be emailed or conveyed over a call to the dance coordinator"
-            ]
+              "Other details will be emailed or conveyed over a call to the dance coordinator",
+            ],
           },
         },
         {
@@ -1881,13 +2393,14 @@
             topics: [
               {
                 title: "Talk Show - Share Your Expertise",
-                description: "Present your expertise and experiences to inspire youth with meaningful content"
-              }
+                description:
+                  "Present your expertise and experiences to inspire youth with meaningful content",
+              },
             ],
             keyIssues: [
               "Share expertise in your field",
               "Inspire youth through experiences",
-              "Engage audience with meaningful content"
+              "Engage audience with meaningful content",
             ],
             expectedSolution: "Live talk show presentation",
             guidelines: [
@@ -1895,8 +2408,8 @@
               "No abusive language or controversial/politically sensitive topics",
               "Follow time limits strictly",
               "Prepare your presentation (PPT optional)",
-              "Topic must be relevant to youth development"
-            ]
+              "Topic must be relevant to youth development",
+            ],
           },
         },
       ];
@@ -1929,8 +2442,7 @@
         },
         {
           question: "Do I need to have a team?",
-          answer:
-            "While teams are preferred, solo participants are welcome.",
+          answer: "While teams are preferred, solo participants are welcome.",
         },
       ];
 
@@ -1940,10 +2452,10 @@
       function renderProblems() {
         const container = document.getElementById("problemCards");
         if (!container) {
-          console.error('problemCards container not found');
+          console.error("problemCards container not found");
           return;
         }
-        
+
         const colors = ["#f97316", "#8b5cf6", "#10b981", "#ec4899", "#f59e0b"];
         let cards = [];
 
@@ -1955,26 +2467,30 @@
             description: problem.description,
             bgColor: colors[index % colors.length],
             category: problem.category,
-            participationType: problem.participationType
+            participationType: problem.participationType,
           }));
         } else {
           // Specific category filter: Show topic cards
-          const filteredProblems = problems.filter((p) => p.category === currentFilter);
-          
+          const filteredProblems = problems.filter(
+            (p) => p.category === currentFilter
+          );
+
           let cardIndex = 0; // Track card index for color variation
           filteredProblems.forEach((problem) => {
-            
             // For hackathon, show problem statements as topic cards
-            if (problem.category === 'hackathon' && problem.details.problemStatements) {
+            if (
+              problem.category === "hackathon" &&
+              problem.details.problemStatements
+            ) {
               problem.details.problemStatements.forEach((ps, psIndex) => {
                 cards.push({
                   eventId: problem.id,
                   problemStatementIndex: psIndex, // Track which problem statement this card represents
                   title: ps.title,
-                  description: ps.statement.substring(0, 120) + '...',
+                  description: ps.statement.substring(0, 120) + "...",
                   bgColor: colors[cardIndex % colors.length],
                   category: problem.category,
-                  participationType: problem.participationType
+                  participationType: problem.participationType,
                 });
                 cardIndex++;
               });
@@ -1989,25 +2505,27 @@
                   description: topic.description,
                   bgColor: colors[cardIndex % colors.length],
                   category: problem.category,
-                  participationType: problem.participationType
+                  participationType: problem.participationType,
                 });
                 cardIndex++;
               });
             } else if (problem.details && problem.details.keyIssues) {
               // For other events, show key issues as topic cards (fallback)
-              problem.details.keyIssues.slice(0, 3).forEach((issue, issueIndex) => {
-                cards.push({
-                  eventId: problem.id,
-                  problemStatementIndex: issueIndex, // Track which topic/issue this card represents
-                  topicTitle: issue, // Store the topic title
-                  title: problem.title,
-                  description: issue,
-                  bgColor: colors[cardIndex % colors.length],
-                  category: problem.category,
-                  participationType: problem.participationType
+              problem.details.keyIssues
+                .slice(0, 3)
+                .forEach((issue, issueIndex) => {
+                  cards.push({
+                    eventId: problem.id,
+                    problemStatementIndex: issueIndex, // Track which topic/issue this card represents
+                    topicTitle: issue, // Store the topic title
+                    title: problem.title,
+                    description: issue,
+                    bgColor: colors[cardIndex % colors.length],
+                    category: problem.category,
+                    participationType: problem.participationType,
+                  });
+                  cardIndex++;
                 });
-                cardIndex++;
-              });
             } else {
               // Fallback: show the event itself as a card
               cards.push({
@@ -2017,7 +2535,7 @@
                 description: problem.description,
                 bgColor: colors[cardIndex % colors.length],
                 category: problem.category,
-                participationType: problem.participationType
+                participationType: problem.participationType,
               });
               cardIndex++;
             }
@@ -2028,9 +2546,11 @@
         container.innerHTML = cards
           .map((card, index) => {
             const rotation = index % 2 === 0 ? "-1deg" : "1deg";
-            const psIndexAttr = card.problemStatementIndex !== null && card.problemStatementIndex !== undefined 
-              ? `data-ps-index="${card.problemStatementIndex}"` 
-              : '';
+            const psIndexAttr =
+              card.problemStatementIndex !== null &&
+              card.problemStatementIndex !== undefined
+                ? `data-ps-index="${card.problemStatementIndex}"`
+                : "";
             return `
         <div class="problem-card" style="background-color: ${card.bgColor}; transform: rotate(${rotation})" data-event-id="${card.eventId}" data-category="${card.category}" ${psIndexAttr}>
           <div class="problem-header">
@@ -2050,22 +2570,29 @@
           card.addEventListener("click", function (e) {
             const category = this.dataset.category;
             const eventId = parseInt(this.dataset.eventId);
-            const psIndex = this.dataset.psIndex !== undefined ? parseInt(this.dataset.psIndex) : null;
-            
+            const psIndex =
+              this.dataset.psIndex !== undefined
+                ? parseInt(this.dataset.psIndex)
+                : null;
+
             // ALWAYS switch to category view when "All" filter is active
             // NEVER open modal from "All" view
             if (currentFilter === "all") {
               // Switch to specific category filter
-              document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
-              const targetBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+              document
+                .querySelectorAll(".filter-btn")
+                .forEach((b) => b.classList.remove("active"));
+              const targetBtn = document.querySelector(
+                `.filter-btn[data-filter="${category}"]`
+              );
               if (targetBtn) {
                 targetBtn.classList.add("active");
               }
-              
+
               // Update current filter and re-render to show topic cards
               currentFilter = category;
               renderProblems();
-            } 
+            }
             // ONLY open modal when a specific category filter is active
             else if (currentFilter !== "all") {
               const problem = problems.find((p) => p.id === eventId);
@@ -2083,57 +2610,87 @@
         const modalBody = document.getElementById("modalBody");
 
         // Check if this is a hackathon with multiple problem statements
-        const isHackathon = problem.category === 'hackathon' && problem.details.problemStatements;
+        const isHackathon =
+          problem.category === "hackathon" && problem.details.problemStatements;
 
         if (isHackathon && problemStatementIndex !== null) {
           // Render ONLY the specific problem statement that was clicked
           const ps = problem.details.problemStatements[problemStatementIndex];
-          
+
           modalBody.innerHTML = `
             <div class="modal-badges">
-              <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
-              <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${problem.participationType}</span>
+              <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${
+                problem.category
+              }</span>
+              <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${
+                problem.participationType
+              }</span>
             </div>
             
             <h2 class="modal-title">${ps.title}</h2>
             
             <div class="modal-body">
               <h3>Problem Statement:</h3>
-              <p style="margin-bottom: 1.5rem; font-weight: 600; font-size: 1.1rem;">${ps.statement}</p>
+              <p style="margin-bottom: 1.5rem; font-weight: 600; font-size: 1.1rem;">${
+                ps.statement
+              }</p>
               
               <h3>Key Issues:</h3>
               <ul>
-                ${ps.keyIssues.map(issue => `<li>• ${issue}</li>`).join('')}
+                ${ps.keyIssues.map((issue) => `<li>• ${issue}</li>`).join("")}
               </ul>
               
               <h3 style="margin-top: 2rem;">Expected Solution:</h3>
-              <p style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem;">${ps.expectedSolution}</p>
+              <p style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem;">${
+                ps.expectedSolution
+              }</p>
               
               <h3 style="margin-top: 2rem;">General Guidelines & Rules:</h3>
               <ul>
-                ${problem.details.guidelines.map(guideline => `<li>• ${guideline}</li>`).join('')}
+                ${problem.details.guidelines
+                  .map((guideline) => `<li>• ${guideline}</li>`)
+                  .join("")}
               </ul>
             </div>
           `;
         } else if (isHackathon) {
           // Render hackathon with all problem statements (fallback if no specific index)
-          const problemStatementsHTML = problem.details.problemStatements.map((ps, index) => `
+          const problemStatementsHTML = problem.details.problemStatements
+            .map(
+              (ps, index) => `
             <div style="margin-bottom: 2.5rem; padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
-              <h3 style="color: #8b5cf6; margin-bottom: 1rem; font-size: 1.4rem;">${ps.title}</h3>
-              <p style="margin-bottom: 1rem; font-weight: 600;">${ps.statement}</p>
+              <h3 style="color: #8b5cf6; margin-bottom: 1rem; font-size: 1.4rem;">${
+                ps.title
+              }</h3>
+              <p style="margin-bottom: 1rem; font-weight: 600;">${
+                ps.statement
+              }</p>
               
               <h4 style="color: #1e293b; margin-top: 1rem; margin-bottom: 0.5rem;">Key Issues:</h4>
               <ul style="margin-left: 1.5rem;">
-                ${ps.keyIssues.map(issue => `<li style="margin-bottom: 0.5rem;">• ${issue}</li>`).join('')}
+                ${ps.keyIssues
+                  .map(
+                    (issue) =>
+                      `<li style="margin-bottom: 0.5rem;">• ${issue}</li>`
+                  )
+                  .join("")}
               </ul>
               
               <h4 style="color: #1e293b; margin-top: 1rem; margin-bottom: 0.5rem;">Expected Solution:</h4>
-              <p style="font-weight: 600; color: #8b5cf6;">${ps.expectedSolution}</p>
+              <p style="font-weight: 600; color: #8b5cf6;">${
+                ps.expectedSolution
+              }</p>
             </div>
-          `).join('');
+          `
+            )
+            .join("");
 
-          const keyIssuesList = problem.details.keyIssues.map(issue => `<li>• ${issue}</li>`).join('');
-          const guidelinesList = problem.details.guidelines.map(guideline => `<li>• ${guideline}</li>`).join('');
+          const keyIssuesList = problem.details.keyIssues
+            .map((issue) => `<li>• ${issue}</li>`)
+            .join("");
+          const guidelinesList = problem.details.guidelines
+            .map((guideline) => `<li>• ${guideline}</li>`)
+            .join("");
 
           modalBody.innerHTML = `
             <div class="modal-badges">
@@ -2177,9 +2734,14 @@
               : "<li>• Follow event rules and regulations</li><li>• Arrive on time</li><li>• Be creative and original</li>";
 
           // If a specific topic index is provided, show only that topic
-          if (problemStatementIndex !== null && problem.details && problem.details.topics && problem.details.topics[problemStatementIndex]) {
+          if (
+            problemStatementIndex !== null &&
+            problem.details &&
+            problem.details.topics &&
+            problem.details.topics[problemStatementIndex]
+          ) {
             const specificTopic = problem.details.topics[problemStatementIndex];
-            
+
             modalBody.innerHTML = `
               <div class="modal-badges">
                 <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
@@ -2206,20 +2768,34 @@
                 </ul>
               </div>
             `;
-          } else if (problemStatementIndex !== null && problem.details && problem.details.keyIssues && problem.details.keyIssues[problemStatementIndex]) {
-            const specificTopic = problem.details.keyIssues[problemStatementIndex];
-            
+          } else if (
+            problemStatementIndex !== null &&
+            problem.details &&
+            problem.details.keyIssues &&
+            problem.details.keyIssues[problemStatementIndex]
+          ) {
+            const specificTopic =
+              problem.details.keyIssues[problemStatementIndex];
+
             modalBody.innerHTML = `
               <div class="modal-badges">
-                <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${problem.category}</span>
-                <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${problem.participationType}</span>
+                <span class="modal-badge" style="background-color: #8b5cf6; color: #ffffff;">${
+                  problem.category
+                }</span>
+                <span class="modal-badge" style="background-color: #ec4899; color: #ffffff;">${
+                  problem.participationType
+                }</span>
               </div>
               
               <h2 class="modal-title">${problem.title}</h2>
               
               <div class="modal-body">
                 <h3>About Event:</h3>
-                <p>${problem.details ? problem.details.statement : problem.description}</p>
+                <p>${
+                  problem.details
+                    ? problem.details.statement
+                    : problem.description
+                }</p>
                 
                 <h3 style="margin-top: 2rem;">Specific Topic:</h3>
                 <div style="padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); border-radius: 1rem; border: 2px solid #8b5cf6; margin-bottom: 2rem;">
@@ -2253,7 +2829,9 @@
               <div class="modal-body">
                 <h3>About:</h3>
                 <p>${
-                  problem.details ? problem.details.statement : problem.description
+                  problem.details
+                    ? problem.details.statement
+                    : problem.description
                 }</p>
                 
                 <h3>Topics/Areas:</h3>
@@ -2343,7 +2921,7 @@
           renderProblems();
         });
       });
-      
+
       // Render problems immediately after setting up event listeners
       renderProblems();
       renderFAQ();
@@ -2351,7 +2929,7 @@
       // Modal close - Set up after DOM is ready
       const modalCloseBtn = document.getElementById("modalClose");
       const modal = document.getElementById("modal");
-      
+
       if (modalCloseBtn) {
         modalCloseBtn.addEventListener("click", function (e) {
           e.stopPropagation();
@@ -2368,21 +2946,24 @@
       }
 
       // Handle agree checkbox to show/hide form
-      const agreeCheckbox = document.getElementById('agreeCheckbox');
-      const formContainer = document.getElementById('formContainer');
-      const formPlaceholder = document.getElementById('formPlaceholder');
-      
-      agreeCheckbox.addEventListener('change', function() {
+      const agreeCheckbox = document.getElementById("agreeCheckbox");
+      const formContainer = document.getElementById("formContainer");
+      const formPlaceholder = document.getElementById("formPlaceholder");
+
+      agreeCheckbox.addEventListener("change", function () {
         if (this.checked) {
-          formPlaceholder.style.display = 'none';
-          formContainer.classList.add('show');
+          formPlaceholder.style.display = "none";
+          formContainer.classList.add("show");
           // Smooth scroll to form
           setTimeout(() => {
-            formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            formContainer.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
           }, 100);
         } else {
-          formPlaceholder.style.display = 'block';
-          formContainer.classList.remove('show');
+          formPlaceholder.style.display = "block";
+          formContainer.classList.remove("show");
         }
       });
 
@@ -2441,8 +3022,9 @@
           const successMsg = document.getElementById("successMessage");
 
           // Get selected events from checkboxes
-          const selectedEvents = Array.from(document.querySelectorAll('.event-checkbox:checked'))
-            .map(cb => cb.value);
+          const selectedEvents = Array.from(
+            document.querySelectorAll(".event-checkbox:checked")
+          ).map((cb) => cb.value);
 
           // Validate at least one event is selected
           if (selectedEvents.length === 0) {
@@ -2587,7 +3169,7 @@
       });
 
       // Initialize filter
-      currentFilter = 'all';
+      currentFilter = "all";
     </script>
     <script>
       (function () {
