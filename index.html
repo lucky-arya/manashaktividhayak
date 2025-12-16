@@ -1755,7 +1755,7 @@
             </p>
           </div>
 
-          <div class="agree-checkbox-container">
+          <div class="agree-checkbox-container" id="agreecontainer">
             <label class="agree-checkbox-label">
               <input type="checkbox" id="agreeCheckbox" />
               <span
@@ -2736,9 +2736,9 @@
               </ul>
               
               <h3 style="margin-top: 2rem;">Expected Solution:</h3>
-              <p style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem;">${
-                ps.expectedSolution
-              }</p>
+              <ul style="list-style: none; padding-left: 0;">
+                ${ps.expectedSolution.split('\n').map(line => line.trim()).filter(line => line.length > 0).map(line => `<li style="font-weight: 600; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 0.5rem;">${line}</li>`).join("")}
+              </ul>
               
               <h3 style="margin-top: 2rem;">Guidelines:</h3>
               <ul>
@@ -2795,9 +2795,9 @@
               </ul>
               
               <h4 style="color: #1e293b; margin-top: 1rem; margin-bottom: 0.5rem;">Expected Solution:</h4>
-              <p style="font-weight: 600; color: #8b5cf6;">${
-                ps.expectedSolution
-              }</p>
+              <ul style="list-style: none; padding-left: 0; margin-left: 1.5rem;">
+                ${ps.expectedSolution.split('\\n').map(line => line.trim()).filter(line => line.length > 0).map(line => `<li style="font-weight: 600; color: #8b5cf6; margin-bottom: 0.3rem;">${line}</li>`).join("")}
+              </ul>
               
               ${ps.guidelines ? `
               <h4 style="color: #1e293b; margin-top: 1rem; margin-bottom: 0.5rem;">Guidelines:</h4>
@@ -2962,7 +2962,7 @@
                 </ul>
                 
                 <div style="margin-top: 2.5rem; text-align: center;">
-                  <a href="#guidelines" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
+                  <a href="#agreecontainer" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
                 </div>
               </div>
             `;
