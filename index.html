@@ -1619,6 +1619,9 @@
           >
             Participants can register for multiple events as Individual or team.
           </p>
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <a href='https://drive.google.com/file/d/1bsGlccm2W0xWB1uCuK0JfRB14K204JMV/view?usp=sharing' target='_blank' style='color: #f97316; background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; border: 2px solid #f97316;'>Click Here to See the Brochure </a>
+          </div>
           <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="art">Express in Art</button>
@@ -2464,29 +2467,35 @@
           category: "expert",
           participationType: "Solo/Team",
           title: "Expert's Experience",
-          description: "Talk Show - Share your expertise and experiences",
+          description: "Talk Show - Obstacles in Your Success Path & Practical Solutions",
           difficulty: "Medium",
           details: {
-            statement: "Share knowledge and experiences through talk shows.",
+            statement: "An engaging talk show featuring eminent speakers, sharing real-life insights on the challenges faced on the road to success and effective ways to overcome them. The session will also include research-based perspectives from Manashakti Research Centre, offering practical guidance for mental resilience, clarity, and value-driven growth.",
             topics: [
               {
-                title: "Talk Show - Share Your Expertise",
+                title: "Obstacles in Your Success Path & Practical Solutions",
                 description:
-                  "Present your expertise and experiences to inspire youth with meaningful content",
+                  "Real-life insights on challenges faced on the road to success and effective ways to overcome them",
               },
             ],
             keyIssues: [
-              "Share expertise in your field",
-              "Inspire youth through experiences",
-              "Engage audience with meaningful content",
+              "Share real-life insights on challenges faced on the road to success",
+              "Provide effective ways to overcome obstacles",
+              "Include research-based perspectives from Manashakti Research Centre",
+              "Offer practical guidance for mental resilience, clarity, and value-driven growth",
             ],
             expectedSolution: "Live talk show presentation",
             guidelines: [
-              "Content must be clean and respectful",
-              "No abusive language or controversial/politically sensitive topics",
-              "Follow time limits strictly",
-              "Prepare your presentation (PPT optional)",
-              "Topic must be relevant to youth development",
+              "Please be seated before the session begins and maintain silence and decorum during the talk show",
+              "Mobile phones must be kept on silent mode throughout the session",
+              "Maintain respectful behavior towards speakers, moderators, and fellow participants",
+              "Entry and exit during the session should be minimal and non-disruptive",
+            ],
+            qnaGuidelines: [
+              "Questions should be brief, relevant to the topic",
+              "Please raise your hand or follow the moderator's instructions to ask questions",
+              "Avoid personal, and inappropriate questions",
+              "The moderator's decision regarding selection and time limits for questions will be final",
             ],
           },
         },
@@ -2876,6 +2885,13 @@
                   .join("")
               : "<li>• Follow event rules and regulations</li><li>• Arrive on time</li><li>• Be creative and original</li>";
 
+          const qnaGuidelinesList =
+            problem.details && problem.details.qnaGuidelines
+              ? problem.details.qnaGuidelines
+                  .map((guideline) => `<li>• ${guideline}</li>`)
+                  .join("")
+              : "";
+
           // If a specific topic index is provided, show only that topic
           if (
             problemStatementIndex !== null &&
@@ -2909,6 +2925,11 @@
                 <ul>
                   ${guidelinesList}
                 </ul>
+                
+                ${qnaGuidelinesList ? `<h3 style="margin-top: 2rem;">Q&A Participation Guidelines:</h3>
+                <ul>
+                  ${qnaGuidelinesList}
+                </ul>` : ''}
                 
                 <div style="margin-top: 2.5rem; text-align: center;">
                   <a href="#guidelines" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
@@ -2961,6 +2982,11 @@
                   ${guidelinesList}
                 </ul>
                 
+                ${qnaGuidelinesList ? `<h3 style="margin-top: 2rem;">Q&A Participation Guidelines:</h3>
+                <ul>
+                  ${qnaGuidelinesList}
+                </ul>` : ''}
+                
                 <div style="margin-top: 2.5rem; text-align: center;">
                   <a href="#agreecontainer" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
                 </div>
@@ -3001,6 +3027,11 @@
                 <ul>
                   ${guidelinesList}
                 </ul>
+                
+                ${qnaGuidelinesList ? `<h3 style="margin-top: 2rem;">Q&A Participation Guidelines:</h3>
+                <ul>
+                  ${qnaGuidelinesList}
+                </ul>` : ''}
                 
                 <div style="margin-top: 2.5rem; text-align: center;">
                   <a href="#guidelines" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
