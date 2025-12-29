@@ -2231,6 +2231,7 @@
             ],
              prizes: [
                   "First Prize:",
+                  
                   "• Trophy and Certificate of Excellence",
                   "• Rewards worth ₹10,500/- includes: Brain Booster kits, 1-3 days residential workshops, Access to Mind Gym activities, Machine-Based Aptitude Test, Seeding Success book.",
                   "",
@@ -2534,6 +2535,19 @@
         },
       ];
 
+      // Prize data for display on cards
+      const prizeData = {
+        first: {
+          amount: "₹10,500/-",
+          highlights: ["Trophy & Certificate of Excellence", "Brain Booster kits", "1-3 days workshops"]
+        },
+        second: {
+          amount: "₹5,050/-",
+          highlights: ["Certificate of Achievement", "Brain Booster kits", "1-3 days workshops"]
+        },
+        participant: "Participation Certificate"
+      };
+
       const faqs = [
         {
           question: "Who can participate in the events?",
@@ -2672,6 +2686,49 @@
               card.problemStatementIndex !== undefined
                 ? `data-ps-index="${card.problemStatementIndex}"`
                 : "";
+            
+            // Add prize section for sub-filter cards (when not in "all" view)
+            const showPrizes = currentFilter !== "all";
+            const isHackathonCard = card.category === "hackathon";
+            
+            // 3rd prize section only for hackathon
+            const thirdPrizeSection = isHackathonCard ? `
+                  <div style="flex: 1; min-width: 120px;">
+                    <div style="display: flex; align-items: center; gap: 0.25rem; margin-bottom: 0.25rem;">
+                      <span style="font-size: 1.25rem;">🥉</span>
+                      <span style="font-weight: bold; color: #cd7f32; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">3rd Prize</span>
+                    </div>
+                    <div style="font-size: 0.9rem; font-weight: bold; color: #fff;">Trophy</div>
+                  </div>
+            ` : '';
+            
+            const prizeSection = showPrizes ? `
+              <div class="prize-section" style="margin-top: 1rem; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 0.75rem; border: 2px dashed rgba(255,255,255,0.5);">
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                  <div style="flex: 1; min-width: 120px;">
+                    <div style="display: flex; align-items: center; gap: 0.25rem; margin-bottom: 0.25rem;">
+                      <span style="font-size: 1.25rem;">🥇</span>
+                      <span style="font-weight: bold; color: #ffd700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">1st Prize</span>
+                    </div>
+                    <div style="font-size: 1.1rem; font-weight: bold; color: #fff;">₹10,500/-</div>
+                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-top: 0.25rem;">Trophy + Certificate of Excellence</div>
+                  </div>
+                  <div style="flex: 1; min-width: 120px;">
+                    <div style="display: flex; align-items: center; gap: 0.25rem; margin-bottom: 0.25rem;">
+                      <span style="font-size: 1.25rem;">🥈</span>
+                      <span style="font-weight: bold; color: #c0c0c0; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">2nd Prize</span>
+                    </div>
+                    <div style="font-size: 1.1rem; font-weight: bold; color: #fff;">₹5,050/-</div>
+                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-top: 0.25rem;">Certificate of Achievement</div>
+                  </div>
+                  ${thirdPrizeSection}
+                </div>
+                <div style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.3); font-size: 0.75rem; color: rgba(255,255,255,0.85); text-align: center;">
+                  🎖️ All Participants receive Participation Certificate
+                </div>
+              </div>
+            ` : '';
+            
             return `
         <div class="problem-card" style="background-color: ${card.bgColor}; transform: rotate(${rotation})" data-event-id="${card.eventId}" data-category="${card.category}" ${psIndexAttr}>
           <div class="problem-header">
@@ -2680,6 +2737,7 @@
           </div>
           <h3 class="problem-title">${card.title}</h3>
           <p class="problem-description">${card.description}</p>
+          ${prizeSection}
           <button class="read-more-btn" style="background-color: rgba(255,255,255,0.3); border: 2px solid white; color: white; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: bold; cursor: pointer; margin-top: 1rem;">Read More →</button>
         </div>
       `;
@@ -2794,12 +2852,60 @@
               </ul>
               ` : ""}
               
-              ${prizesHTML ? `
-              <h3 style="margin-top: 2rem; color: #10b981;">Prizes & Rewards:</h3>
-              <ul style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 1.5rem; border-radius: 1rem; border: 2px solid #10b981;">
-                ${prizesHTML}
-              </ul>
-              ` : ""}
+              <h3 style="margin-top: 2rem; color: #10b981; font-size: 1.5rem;">🏆 Prizes & Rewards:</h3>
+              <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.5rem; border-radius: 1rem; border: 3px solid #10b981; margin-top: 1rem;">
+                <!-- First Prize -->
+                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 1rem; border: 2px solid #f59e0b;">
+                  <div style="font-size: 3rem;">🥇</div>
+                  <div style="flex: 1;">
+                    <div style="font-size: 1.4rem; font-weight: 800; color: #b45309; margin-bottom: 0.5rem;">1st Prize - Rewards Worth ₹10,500/-</div>
+                    <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                      <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                      <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                      <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                      <li style="margin-bottom: 0.25rem;">Machine-Based Aptitude Test</li>
+                      <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                      <li style="margin-bottom: 0.25rem; color: #dc2626; font-weight: 600;">Opportunity to scale and deploy the project with Manashakti</li>
+                      <li style="color: #dc2626; font-weight: 600;">Trophy and Certificate of Excellence</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Second Prize -->
+                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-radius: 1rem; border: 2px solid #94a3b8;">
+                  <div style="font-size: 3rem;">🥈</div>
+                  <div style="flex: 1;">
+                    <div style="font-size: 1.4rem; font-weight: 800; color: #475569; margin-bottom: 0.5rem;">2nd Prize - Rewards Worth ₹5,050/-</div>
+                    <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                      <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                      <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                      <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                      <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                      <li style="color: #dc2626; font-weight: 600;">Certificate of Achievement</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Third Prize -->
+                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); border-radius: 1rem; border: 2px solid #f97316;">
+                  <div style="font-size: 3rem;">🥉</div>
+                  <div style="flex: 1;">
+                    <div style="font-size: 1.4rem; font-weight: 800; color: #c2410c; margin-bottom: 0.5rem;">3rd Prize</div>
+                    <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                      <li style="color: #dc2626; font-weight: 600;">Trophy</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Participation -->
+                <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
+                  <div style="font-size: 2.5rem;">🏅</div>
+                  <div>
+                    <div style="font-size: 1.2rem; font-weight: 700; color: #6d28d9;">All Participants</div>
+                    <div style="color: #1e293b; font-weight: 600;">Participation Certificate</div>
+                  </div>
+                </div>
+              </div>
               
               <div style="margin-top: 2.5rem; text-align: center;">
                 <a href="#guidelines" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
@@ -2964,6 +3070,50 @@
                   ${qnaGuidelinesList}
                 </ul>` : ''}
                 
+                <h3 style="margin-top: 2rem; color: #10b981; font-size: 1.5rem;">🏆 Prizes & Rewards:</h3>
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.5rem; border-radius: 1rem; border: 3px solid #10b981; margin-top: 1rem;">
+                  <!-- First Prize -->
+                  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 1rem; border: 2px solid #f59e0b;">
+                    <div style="font-size: 3rem;">🥇</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 1.4rem; font-weight: 800; color: #b45309; margin-bottom: 0.5rem;">1st Prize - Rewards Worth ₹10,500/-</div>
+                      <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                        <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                        <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                        <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                        <li style="margin-bottom: 0.25rem;">Machine-Based Aptitude Test</li>
+                        <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                        <li style="margin-bottom: 0.25rem; color: #dc2626; font-weight: 600;">Opportunity to scale and deploy the project with Manashakti</li>
+                        <li style="color: #dc2626; font-weight: 600;">Trophy and Certificate of Excellence</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Second Prize -->
+                  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-radius: 1rem; border: 2px solid #94a3b8;">
+                    <div style="font-size: 3rem;">🥈</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 1.4rem; font-weight: 800; color: #475569; margin-bottom: 0.5rem;">2nd Prize - Rewards Worth ₹5,050/-</div>
+                      <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                        <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                        <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                        <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                        <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                        <li style="color: #dc2626; font-weight: 600;">Certificate of Achievement</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Participation -->
+                  <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
+                    <div style="font-size: 2.5rem;">🏅</div>
+                    <div>
+                      <div style="font-size: 1.2rem; font-weight: 700; color: #6d28d9;">All Participants</div>
+                      <div style="color: #1e293b; font-weight: 600;">Participation Certificate</div>
+                    </div>
+                  </div>
+                </div>
+                
                 <div style="margin-top: 2.5rem; text-align: center;">
                   <a href="#guidelines" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
                 </div>
@@ -3020,6 +3170,50 @@
                   ${qnaGuidelinesList}
                 </ul>` : ''}
                 
+                <h3 style="margin-top: 2rem; color: #10b981; font-size: 1.5rem;">🏆 Prizes & Rewards:</h3>
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.5rem; border-radius: 1rem; border: 3px solid #10b981; margin-top: 1rem;">
+                  <!-- First Prize -->
+                  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 1rem; border: 2px solid #f59e0b;">
+                    <div style="font-size: 3rem;">🥇</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 1.4rem; font-weight: 800; color: #b45309; margin-bottom: 0.5rem;">1st Prize - Rewards Worth ₹10,500/-</div>
+                      <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                        <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                        <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                        <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                        <li style="margin-bottom: 0.25rem;">Machine-Based Aptitude Test</li>
+                        <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                        <li style="margin-bottom: 0.25rem; color: #dc2626; font-weight: 600;">Opportunity to scale and deploy the project with Manashakti</li>
+                        <li style="color: #dc2626; font-weight: 600;">Trophy and Certificate of Excellence</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Second Prize -->
+                  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-radius: 1rem; border: 2px solid #94a3b8;">
+                    <div style="font-size: 3rem;">🥈</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 1.4rem; font-weight: 800; color: #475569; margin-bottom: 0.5rem;">2nd Prize - Rewards Worth ₹5,050/-</div>
+                      <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                        <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                        <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                        <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                        <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                        <li style="color: #dc2626; font-weight: 600;">Certificate of Achievement</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Participation -->
+                  <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
+                    <div style="font-size: 2.5rem;">🏅</div>
+                    <div>
+                      <div style="font-size: 1.2rem; font-weight: 700; color: #6d28d9;">All Participants</div>
+                      <div style="color: #1e293b; font-weight: 600;">Participation Certificate</div>
+                    </div>
+                  </div>
+                </div>
+                
                 <div style="margin-top: 2.5rem; text-align: center;">
                   <a href="#agreecontainer" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
                 </div>
@@ -3065,6 +3259,50 @@
                 <ul>
                   ${qnaGuidelinesList}
                 </ul>` : ''}
+                
+                <h3 style="margin-top: 2rem; color: #10b981; font-size: 1.5rem;">🏆 Prizes & Rewards:</h3>
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.5rem; border-radius: 1rem; border: 3px solid #10b981; margin-top: 1rem;">
+                  <!-- First Prize -->
+                  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 1rem; border: 2px solid #f59e0b;">
+                    <div style="font-size: 3rem;">🥇</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 1.4rem; font-weight: 800; color: #b45309; margin-bottom: 0.5rem;">1st Prize - Rewards Worth ₹10,500/-</div>
+                      <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                        <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                        <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                        <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                        <li style="margin-bottom: 0.25rem;">Machine-Based Aptitude Test</li>
+                        <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                        <li style="margin-bottom: 0.25rem; color: #dc2626; font-weight: 600;">Opportunity to scale and deploy the project with Manashakti</li>
+                        <li style="color: #dc2626; font-weight: 600;">Trophy and Certificate of Excellence</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Second Prize -->
+                  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-radius: 1rem; border: 2px solid #94a3b8;">
+                    <div style="font-size: 3rem;">🥈</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 1.4rem; font-weight: 800; color: #475569; margin-bottom: 0.5rem;">2nd Prize - Rewards Worth ₹5,050/-</div>
+                      <ul style="margin: 0; padding-left: 1.25rem; color: #1e293b; list-style-type: disc;">
+                        <li style="margin-bottom: 0.25rem;">Brain Booster kits</li>
+                        <li style="margin-bottom: 0.25rem;">1-3 days residential workshops</li>
+                        <li style="margin-bottom: 0.25rem;">Access to Mind Gym activities</li>
+                        <li style="margin-bottom: 0.25rem;">Seeding Success book</li>
+                        <li style="color: #dc2626; font-weight: 600;">Certificate of Achievement</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Participation -->
+                  <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border-radius: 1rem; border: 2px solid #8b5cf6;">
+                    <div style="font-size: 2.5rem;">🏅</div>
+                    <div>
+                      <div style="font-size: 1.2rem; font-weight: 700; color: #6d28d9;">All Participants</div>
+                      <div style="color: #1e293b; font-weight: 600;">Participation Certificate</div>
+                    </div>
+                  </div>
+                </div>
                 
                 <div style="margin-top: 2.5rem; text-align: center;">
                   <a href="#guidelines" onclick="document.getElementById('modal').classList.remove('show');" style="display: inline-block; padding: 1rem 3rem; font-size: 1.25rem; font-weight: bold; border-radius: 9999px; border: 4px solid #1e293b; background-color: #f97316; color: #ffffff; box-shadow: 4px 4px 0px #1e293b; text-decoration: none; transition: all 0.3s ease; cursor: pointer;">Register Now</a>
