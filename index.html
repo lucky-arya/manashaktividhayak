@@ -1812,114 +1812,48 @@
               Loading…
             </iframe>
 
-            <!-- QR Code & Direct Link - Always Visible -->
+            <!-- Direct Link - Always Visible -->
             <div
               style="
                 text-align: center;
-                padding: 2rem;
+                padding: 1.5rem;
                 margin-top: 2rem;
                 background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
                 border-radius: 1rem;
                 border: 2px solid #8b5cf6;
               "
             >
-              <h3
-                style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.3rem"
-              >
-                📱 Alternative Access Methods
-              </h3>
-              <div
+              <a
+                href="https://forms.gle/jwxksaAyRCweyYYj6"
+                target="_blank"
+                rel="noopener noreferrer"
                 style="
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-                  align-items: flex-start;
-                  gap: 3rem;
+                  display: inline-block;
+                  background: linear-gradient(
+                    135deg,
+                    #8b5cf6 0%,
+                    #ec4899 100%
+                  );
+                  color: white;
+                  padding: 1rem 2.5rem;
+                  border-radius: 2rem;
+                  text-decoration: none;
+                  font-weight: 700;
+                  font-size: 1.15rem;
+                  transition: transform 0.3s ease;
+                  box-shadow: 4px 4px 0px #1e293b;
                 "
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
               >
-                <!-- QR Code Section -->
-                <div>
-                  <h4
-                    style="
-                      color: #1e293b;
-                      margin-bottom: 1rem;
-                      font-size: 1.1rem;
-                    "
-                  >
-                    Scan QR Code
-                  </h4>
-                  <img
-                    src="assets/qr-code.jpg"
-                    alt="Registration Form QR Code"
-                    style="
-                      max-width: 200px;
-                      border: 3px solid #8b5cf6;
-                      border-radius: 0.5rem;
-                      padding: 0.5rem;
-                      background: white;
-                    "
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                  />
-                  <p
-                    style="
-                      display: none;
-                      color: #ef4444;
-                      font-style: italic;
-                      font-size: 0.9rem;
-                    "
-                  >
-                    QR Code not available
-                  </p>
-                </div>
-
-                <!-- Direct Link Section -->
-                <div
-                  style="
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <h4
-                    style="
-                      color: #1e293b;
-                      margin-bottom: 1rem;
-                      font-size: 1.1rem;
-                    "
-                  >
-                    Or Open Form Directly
-                  </h4>
-                  <a
-                    href="https://forms.gle/jwxksaAyRCweyYYj6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style="
-                      display: inline-block;
-                      background: linear-gradient(
-                        135deg,
-                        #8b5cf6 0%,
-                        #ec4899 100%
-                      );
-                      color: white;
-                      padding: 0.8rem 1.5rem;
-                      border-radius: 2rem;
-                      text-decoration: none;
-                      font-weight: 700;
-                      font-size: 1rem;
-                      transition: transform 0.3s ease;
-                      box-shadow: 4px 4px 0px #1e293b;
-                    "
-                    onmouseover="this.style.transform='scale(1.05)'"
-                    onmouseout="this.style.transform='scale(1)'"
-                  >
-                    🔗 Open Form in New Tab
-                  </a>
-                </div>
-              </div>
+                🔗 Open Form in New Tab
+              </a>
+              <p style="margin-top: 0.75rem; margin-bottom: 0; color: #64748b; font-size: 0.95rem; font-weight: 500;">
+                Prefer to fill the form in full screen? Click the button above
+              </p>
             </div>
 
-            <!-- Fallback Option: QR Code & Direct Link -->
+            <!-- Fallback Option: Direct Link -->
             <div
               id="formFallback"
               style="
@@ -1931,45 +1865,15 @@
               "
             >
               <h3
-                style="color: #8b5cf6; margin-bottom: 1.5rem; font-size: 1.5rem"
+                style="color: #8b5cf6; margin-bottom: 1rem; font-size: 1.5rem"
               >
-                Alternative Registration Options
+                Registration Form
               </h3>
-              <p style="color: #1e293b; margin-bottom: 2rem">
-                If the form above doesn't load, please use one of these options:
+              <p style="color: #1e293b; margin-bottom: 1.5rem">
+                If the embedded form doesn't load, please click the button below:
               </p>
 
-              <!-- QR Code Section -->
-              <div style="margin-bottom: 2rem">
-                <h4 style="color: #1e293b; margin-bottom: 1rem">
-                  Scan QR Code
-                </h4>
-                <img
-                  id="qrCodeImage"
-                  src="assets/qr-code.jpg"
-                  alt="Registration Form QR Code"
-                  style="
-                    max-width: 250px;
-                    border: 3px solid #8b5cf6;
-                    border-radius: 0.5rem;
-                    padding: 1rem;
-                    background: white;
-                  "
-                  onerror="this.style.display='none'; document.getElementById('qrCodeError').style.display='block';"
-                />
-                <p
-                  id="qrCodeError"
-                  style="display: none; color: #ef4444; font-style: italic"
-                >
-                  QR Code image not available
-                </p>
-              </div>
-
-              <!-- Direct Link Section -->
               <div>
-                <h4 style="color: #1e293b; margin-bottom: 1rem">
-                  Or Click the Link Below
-                </h4>
                 <a
                   id="directFormLink"
                   href="https://forms.gle/jwxksaAyRCweyYYj6"
@@ -1983,7 +1887,7 @@
                       #ec4899 100%
                     );
                     color: white;
-                    padding: 1rem 2rem;
+                    padding: 1rem 2.5rem;
                     border-radius: 2rem;
                     text-decoration: none;
                     font-weight: 700;
@@ -1994,11 +1898,8 @@
                   onmouseover="this.style.transform='scale(1.05)'"
                   onmouseout="this.style.transform='scale(1)'"
                 >
-                  🔗 Open Registration Form in New Tab
+                  🔗 Open Registration Form
                 </a>
-                <p style="margin-top: 1rem; color: #64748b; font-size: 0.9rem">
-                  The form will open in a new browser tab
-                </p>
               </div>
             </div>
           </div>
