@@ -2424,19 +2424,6 @@
               "Participants will receive an official certificate from Manashakti Research Centre",
               "Selected posters will be exhibited in the central display pavilion at Fest Yuva Nirman 2026",
               "Originality is essential; plagiarized submissions will not be certified"
-            ],
-            prizes: [
-              "First Prize:",
-              "• Trophy and Certificate of Excellence",
-              "• Rewards worth ₹10,500/- includes: Brain Booster kits, 1-3 days residential workshops, Access to Mind Gym activities, Machine-Based Aptitude Test, Seeding Success book.",
-              "",
-              "Second Prize:",
-              "• Certificate of Achievement",
-              "• Rewards worth ₹5,050/- includes: Brain Booster kits, 1-3 days residential workshops, Access to Mind Gym activities, Seeding Success book.",
-              "",
-              "Third Prize: Trophy + Certificate of Excellence",
-              "",
-              "All Participants: Certificate from Manashakti Research Centre (College Credits Eligible)"
             ]
           },
         },
@@ -2642,7 +2629,8 @@
             const showPrizes =
               currentFilter !== "all" &&
               card.category !== "talkshow" &&
-              card.category !== "navaras";
+              card.category !== "navaras" &&
+              card.category !== "poster";
             const isHackathonCard = card.category === "hackathon";
             
             // 3rd prize section for all cards
@@ -2656,6 +2644,13 @@
                   </div>
             `;
             
+            const posterCertSection = card.category === "poster" && currentFilter !== "all" ? `
+              <div class="prize-section" style="margin-top: 1rem; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 0.75rem; border: 2px dashed rgba(255,255,255,0.5); text-align: center;">
+                <div style="font-size: 1.05rem; font-weight: bold; color: #fff;">📜 Certificate by Manashakti</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.95); margin-top: 0.25rem;">College Credits Eligible • Certificate Only</div>
+              </div>
+            ` : '';
+
             const prizeSection = showPrizes ? `
               <div class="prize-section" style="margin-top: 1rem; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 0.75rem; border: 2px dashed rgba(255,255,255,0.5);">
                 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
@@ -2691,7 +2686,7 @@
           </div>
           <h3 class="problem-title">${card.title}</h3>
           <p class="problem-description">${card.description}</p>
-          ${prizeSection}
+          ${prizeSection || posterCertSection}
           <button class="read-more-btn" style="background-color: rgba(255,255,255,0.3); border: 2px solid white; color: white; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: bold; cursor: pointer; margin-top: 1rem;">Read More →</button>
         </div>
       `;
@@ -2985,7 +2980,19 @@
               : "";
 
           const isNonCompetitive =
-            problem.category === "talkshow" || problem.category === "navaras";
+            problem.category === "talkshow" ||
+            problem.category === "navaras" ||
+            problem.category === "poster";
+
+          const posterCertModalSection = problem.category === "poster" ? `
+            <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 1.25rem; border-radius: 1rem; border: 2px solid #10b981; margin-top: 2rem; display: flex; align-items: center; gap: 1rem;">
+              <div style="font-size: 2.5rem;">📜</div>
+              <div>
+                <div style="font-size: 1.25rem; font-weight: 700; color: #065f46; margin-bottom: 0.25rem;">Certificate Awarded (College Credits Eligible)</div>
+                <div style="color: #1e293b; font-weight: 600;">All registered participants will receive an official Certificate from Manashakti Research Centre and an opportunity to showcase their posters at Fest Yuva Nirman 2026. (Certificate only, no cash prizes)</div>
+              </div>
+            </div>
+          ` : '';
 
           const modalPrizeSection = !isNonCompetitive
             ? `
@@ -3043,7 +3050,7 @@
                   </div>
                 </div>
               `
-            : "";
+            : posterCertModalSection;
 
           // If a specific topic index is provided, show only that topic
           if (
